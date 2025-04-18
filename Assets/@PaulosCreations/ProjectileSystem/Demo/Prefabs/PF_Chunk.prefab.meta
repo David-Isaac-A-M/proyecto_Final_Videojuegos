@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d6b1fe0ebe9bf6244a1615e7af18cfaa
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228460
+  packageName: Projectile Management System
+  packageVersion: 1.3.0
+  assetPath: Assets/@PaulosCreations/ProjectileSystem/Demo/Prefabs/PF_Chunk.prefab
+  uploadId: 643386

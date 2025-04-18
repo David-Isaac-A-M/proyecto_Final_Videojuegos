@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 308513783d9d1de44b7bf06e404b20fc
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228460
+  packageName: Projectile Management System
+  packageVersion: 1.3.0
+  assetPath: Assets/@PaulosCreations/ProjectileSystem/Demo/Materials/Mat_Wall.mat
+  uploadId: 643386

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d63e6505dd5bcff44881e3939ace9a83
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228460
+  packageName: Projectile Management System
+  packageVersion: 1.3.0
+  assetPath: Assets/@PaulosCreations/ProjectileSystem/Demo/Scenes/Scene_Display.unity
+  uploadId: 643386

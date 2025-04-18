@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 12c1f86d0995ee94db6886360eca1c82
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228460
+  packageName: Projectile Management System
+  packageVersion: 1.3.0
+  assetPath: Assets/@PaulosCreations/ProjectileSystem/Prefabs/ProjectileEffects/Particle_Impact_Chuncks.prefab
+  uploadId: 643386

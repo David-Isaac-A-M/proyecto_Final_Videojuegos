@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a57cceeb6d195b14ca949e6bfdd02ac7
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228460
+  packageName: Projectile Management System
+  packageVersion: 1.3.0
+  assetPath: Assets/@PaulosCreations/ProjectileSystem/Resources/Projectiles/Projectile_Ice.prefab
+  uploadId: 643386

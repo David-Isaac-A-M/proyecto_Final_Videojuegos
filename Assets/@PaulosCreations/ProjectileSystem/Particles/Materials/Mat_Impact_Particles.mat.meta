@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9e50a0d5c45a45747ac6ad4e76fbf0ad
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228460
+  packageName: Projectile Management System
+  packageVersion: 1.3.0
+  assetPath: Assets/@PaulosCreations/ProjectileSystem/Particles/Materials/Mat_Impact_Particles.mat
+  uploadId: 643386

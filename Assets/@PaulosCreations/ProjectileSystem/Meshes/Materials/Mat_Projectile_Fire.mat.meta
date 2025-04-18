@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6889383aae8a8fe4c9b86d1e3195fbf9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228460
+  packageName: Projectile Management System
+  packageVersion: 1.3.0
+  assetPath: Assets/@PaulosCreations/ProjectileSystem/Meshes/Materials/Mat_Projectile_Fire.mat
+  uploadId: 643386

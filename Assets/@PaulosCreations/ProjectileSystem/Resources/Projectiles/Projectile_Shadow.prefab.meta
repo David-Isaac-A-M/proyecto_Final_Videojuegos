@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 150a61a9a8abb5940a5f3bb539fd9cd0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228460
+  packageName: Projectile Management System
+  packageVersion: 1.3.0
+  assetPath: Assets/@PaulosCreations/ProjectileSystem/Resources/Projectiles/Projectile_Shadow.prefab
+  uploadId: 643386

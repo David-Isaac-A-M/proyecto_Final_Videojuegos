@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c9ef08c616cad1f4ba0d7e497fab9fa2
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228460
+  packageName: Projectile Management System
+  packageVersion: 1.3.0
+  assetPath: Assets/@PaulosCreations/ProjectileSystem/Resources/Projectiles/Projectile_Rocket.prefab
+  uploadId: 643386

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7e2b127c028fba54f84b8ff3c101ab0f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228460
+  packageName: Projectile Management System
+  packageVersion: 1.3.0
+  assetPath: Assets/@PaulosCreations/ProjectileSystem/Particles/Materials/Mat_Projectile_trail.mat
+  uploadId: 643386

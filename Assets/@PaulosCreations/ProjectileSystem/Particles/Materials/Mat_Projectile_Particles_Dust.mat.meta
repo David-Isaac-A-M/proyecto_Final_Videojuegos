@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8414a882bb3833c4db1356ae4513f861
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228460
+  packageName: Projectile Management System
+  packageVersion: 1.3.0
+  assetPath: Assets/@PaulosCreations/ProjectileSystem/Particles/Materials/Mat_Projectile_Particles_Dust.mat
+  uploadId: 643386

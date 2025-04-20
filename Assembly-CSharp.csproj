@@ -61,7 +61,6 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.35f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Jugador.cs" />
     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\BasicBehaviour.cs" />
     <Compile Include="Assets\@PaulosCreations\ProjectileSystem\Demo\Scripts\FireProjectile.cs" />
     <Compile Include="Assets\3rdPerson+Fly\Scripts\LevelScripts\ControlsTutorial.cs" />
@@ -73,7 +72,9 @@
     <Compile Include="Assets\@PaulosCreations\ProjectileSystem\Demo\Scripts\SceneLoading.cs" />
     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\AimBehaviourBasic.cs" />
     <Compile Include="Assets\@PaulosCreations\ProjectileSystem\Scripts\Projectile_Controller.cs" />
+    <Compile Include="Assets\Scripts\Jugador\Jugador.cs" />
     <Compile Include="Assets\3rdPerson+Fly\Scripts\LevelScripts\HintManagement.cs" />
+    <Compile Include="Assets\Scripts\Enemigos\Enemigo_CQC.cs" />
     <Compile Include="Assets\@PaulosCreations\ProjectileSystem\Scripts\Projectile_Manager.cs" />
     <Compile Include="Assets\@PaulosCreations\ProjectileSystem\Demo\Scripts\DemoDisplay.cs" />
     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\FlyBehaviour.cs" />

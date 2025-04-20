@@ -450,7 +450,8 @@
 "Assets/@PaulosCreations/ProjectileSystem/Scripts/Projectile_Controller.cs"
 "Assets/@PaulosCreations/ProjectileSystem/Scripts/Projectile_Impact.cs"
 "Assets/@PaulosCreations/ProjectileSystem/Scripts/Projectile_Manager.cs"
-"Assets/Scripts/Jugador.cs"
+"Assets/Scripts/Enemigos/Enemigo_CQC.cs"
+"Assets/Scripts/Jugador/Jugador.cs"
 -langversion:9.0
 /deterministic
 /optimize+

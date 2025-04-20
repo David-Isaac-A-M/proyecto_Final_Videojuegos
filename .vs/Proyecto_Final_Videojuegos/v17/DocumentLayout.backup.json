@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9AEDE2E7-1E51-7814-4472-F9A805AD87AB}|Assembly-CSharp.csproj|c:\\users\\famil\\proyecto_final_videojuegos\\assets\\tutorialinfo\\scripts\\readme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AEDE2E7-1E51-7814-4472-F9A805AD87AB}|Assembly-CSharp.csproj|solutionrelative:assets\\tutorialinfo\\scripts\\readme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\TutorialInfo\\Scripts\\Readme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\TutorialInfo\\Scripts\\Readme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,10 +24,8 @@
               "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\Readme.cs",
               "ToolTip": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\TutorialInfo\\Scripts\\Readme.cs",
               "RelativeToolTip": "Assets\\TutorialInfo\\Scripts\\Readme.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T03:14:15.185Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T03:14:15.185Z"
             }
           ]
         }

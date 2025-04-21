@@ -65,6 +65,7 @@
     <Compile Include="Assets\@PaulosCreations\ProjectileSystem\Demo\Scripts\FireProjectile.cs" />
     <Compile Include="Assets\3rdPerson+Fly\Scripts\LevelScripts\ControlsTutorial.cs" />
     <Compile Include="Assets\3rdPerson+Fly\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\Enemigos\Enemigo_Rango.cs" />
     <Compile Include="Assets\3rdPerson+Fly\Scripts\LevelScripts\ThirdPersonOrbitCamBasic.cs" />
     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\MoveBehaviour.cs" />
     <Compile Include="Assets\@PaulosCreations\ProjectileSystem\Scripts\Projectile_Impact.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\AimBehaviourBasic.cs" />
     <Compile Include="Assets\@PaulosCreations\ProjectileSystem\Scripts\Projectile_Controller.cs" />
     <Compile Include="Assets\Mystery Studio\Easy Collider\Scripts\AddCollidersToMeshes.cs" />
+    <Compile Include="Assets\Rango_Enemigo.cs" />
     <Compile Include="Assets\Scripts\Jugador\Jugador.cs" />
     <Compile Include="Assets\3rdPerson+Fly\Scripts\LevelScripts\HintManagement.cs" />
     <Compile Include="Assets\Scripts\Enemigos\Enemigo_CQC.cs" />

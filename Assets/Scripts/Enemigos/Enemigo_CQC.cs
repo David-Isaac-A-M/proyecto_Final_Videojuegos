@@ -10,6 +10,7 @@ public class Enemigo_CQC : MonoBehaviour
     public Animator animator;
     public Quaternion angulo;
     public float grado;
+    public Enemigo_Rango rango;
 
     private bool verificacionRage;
     
@@ -62,29 +63,27 @@ public class Enemigo_CQC : MonoBehaviour
         }
         else
         {
-            if(verificacionRage==false)
+            var lookpos = jugador.transform.position - transform.position;
+            lookpos.y = 0;
+            var rotation = Quaternion.LookRotation(lookpos);
+            if (verificacionRage==false)
             {
                 animator.SetBool("rage", true);
             }
             else
             {
-                if(Vector3.Distance(transform.position, jugador.transform.position) > 3 && !atacando)
+                if(Vector3.Distance(transform.position, jugador.transform.position) > 1 && !atacando)
                 {
-                    var lookpos = jugador.transform.position - transform.position;
-                    lookpos.y = 0;
-                    var rotation = Quaternion.LookRotation(lookpos);
+                    
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 3);
                     animator.SetBool("walk", true);
                     transform.Translate(Vector3.forward * 2 * Time.deltaTime);
-
                     animator.SetBool("attack", false);
                 }
                 else
                 {
+                    transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 3);
                     animator.SetBool("walk", false );
-
-                    animator.SetBool("attack", true );
-                    atacando = true;
                 }
             }
             
@@ -101,5 +100,6 @@ public class Enemigo_CQC : MonoBehaviour
     {
         animator.SetBool("attack", false) ;
         atacando = false;
+        rango.GetComponent<CapsuleCollider>().enabled = true;
     }
 }

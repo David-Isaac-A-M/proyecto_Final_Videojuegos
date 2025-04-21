@@ -451,7 +451,9 @@
 "Assets/@PaulosCreations/ProjectileSystem/Scripts/Projectile_Impact.cs"
 "Assets/@PaulosCreations/ProjectileSystem/Scripts/Projectile_Manager.cs"
 "Assets/Mystery Studio/Easy Collider/Scripts/AddCollidersToMeshes.cs"
+"Assets/Rango_Enemigo.cs"
 "Assets/Scripts/Enemigos/Enemigo_CQC.cs"
+"Assets/Scripts/Enemigos/Enemigo_Rango.cs"
 "Assets/Scripts/Jugador/Jugador.cs"
 -langversion:9.0
 /deterministic

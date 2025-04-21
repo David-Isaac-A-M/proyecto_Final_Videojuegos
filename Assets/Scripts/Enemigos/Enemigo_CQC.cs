@@ -11,6 +11,7 @@ public class Enemigo_CQC : MonoBehaviour
     public Quaternion angulo;
     public float grado;
 
+    private bool verificacionRage;
     
     public GameObject jugador;
 
@@ -19,6 +20,7 @@ public class Enemigo_CQC : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         jugador = GameObject.FindWithTag("jugador");
+        verificacionRage = false;
     }
 
     // Update is called once per frame
@@ -31,8 +33,8 @@ public class Enemigo_CQC : MonoBehaviour
     {
         if(Vector3.Distance(transform.position, jugador.transform.position)>5)
         {
-            Debug.Log("Estoy en el if");
             animator.SetBool("rage", false);
+            verificacionRage=false;
             cronometro += 1 * Time.deltaTime;
             if (cronometro > 4)
             {
@@ -59,14 +61,26 @@ public class Enemigo_CQC : MonoBehaviour
         }
         else
         {
-            Debug.Log("Estoy en el else");
-            var lookpos = jugador.transform.position - transform.position;
-            lookpos.y = 0;
-            var rotation = Quaternion.LookRotation(lookpos);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 3);
-            animator.SetBool("walk", true);
-            animator.SetBool("rage", true);
-            transform.Translate(Vector3.forward * 2 * Time.deltaTime);
+            if(verificacionRage==false)
+            {
+                animator.SetBool("rage", true);
+            }
+            else
+            {
+                var lookpos = jugador.transform.position - transform.position;
+                lookpos.y = 0;
+                var rotation = Quaternion.LookRotation(lookpos);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 3);
+                animator.SetBool("walk", true);
+                transform.Translate(Vector3.forward * 2 * Time.deltaTime);
+            }
+            
         }
+    }
+
+    public void DesactivarRage()
+    {
+        verificacionRage = true;
+        animator.SetBool("rage", false);
     }
 }

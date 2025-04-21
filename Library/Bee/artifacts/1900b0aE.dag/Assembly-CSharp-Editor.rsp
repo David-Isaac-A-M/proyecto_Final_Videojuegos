@@ -452,6 +452,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.35f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.35f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/3rdPerson+Fly/Scripts/Editor/ReadmeEditor.cs"
+"Assets/Mystery Studio/Easy Collider/Editor/AddCollidersToMeshesEditor.cs"
 -langversion:9.0
 /deterministic
 /optimize+

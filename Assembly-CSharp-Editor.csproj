@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\3rdPerson+Fly\Scripts\Editor\ReadmeEditor.cs" />
+    <Compile Include="Assets\Mystery Studio\Easy Collider\Editor\AddCollidersToMeshesEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

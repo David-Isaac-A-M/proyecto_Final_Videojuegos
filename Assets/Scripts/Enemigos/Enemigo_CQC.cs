@@ -14,13 +14,14 @@ public class Enemigo_CQC : MonoBehaviour
     private bool verificacionRage;
     
     public GameObject jugador;
-
+    public bool atacando;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         animator = GetComponent<Animator>();
         jugador = GameObject.FindWithTag("jugador");
         verificacionRage = false;
+        atacando = false;
     }
 
     // Update is called once per frame
@@ -67,12 +68,24 @@ public class Enemigo_CQC : MonoBehaviour
             }
             else
             {
-                var lookpos = jugador.transform.position - transform.position;
-                lookpos.y = 0;
-                var rotation = Quaternion.LookRotation(lookpos);
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 3);
-                animator.SetBool("walk", true);
-                transform.Translate(Vector3.forward * 2 * Time.deltaTime);
+                if(Vector3.Distance(transform.position, jugador.transform.position) > 3 && !atacando)
+                {
+                    var lookpos = jugador.transform.position - transform.position;
+                    lookpos.y = 0;
+                    var rotation = Quaternion.LookRotation(lookpos);
+                    transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 3);
+                    animator.SetBool("walk", true);
+                    transform.Translate(Vector3.forward * 2 * Time.deltaTime);
+
+                    animator.SetBool("attack", false);
+                }
+                else
+                {
+                    animator.SetBool("walk", false );
+
+                    animator.SetBool("attack", true );
+                    atacando = true;
+                }
             }
             
         }
@@ -82,5 +95,11 @@ public class Enemigo_CQC : MonoBehaviour
     {
         verificacionRage = true;
         animator.SetBool("rage", false);
+    }
+
+    public void DesactivarAttack()
+    {
+        animator.SetBool("attack", false) ;
+        atacando = false;
     }
 }

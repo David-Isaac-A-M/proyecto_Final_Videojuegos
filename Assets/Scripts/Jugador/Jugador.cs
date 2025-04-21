@@ -36,4 +36,20 @@ public class Jugador : MonoBehaviour
             Projectile_Manager._Instance.FireProjectileForward("Projectile_Fire", boquilla);
         }
     }
+
+    private void OnTriggerEnter(Collider colision)
+    {
+        if (colision.tag=="enemigo")
+        {
+            Debug.Log("Impacto recivido");
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag =="enemigo")
+        {
+            Debug.Log("Impacto recivido");
+        }
+    }
 }

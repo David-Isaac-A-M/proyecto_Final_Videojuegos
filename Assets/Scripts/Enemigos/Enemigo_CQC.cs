@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemigo_CQC : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Enemigo_CQC : MonoBehaviour
     public Enemigo_Rango rango;
 
     private bool verificacionRage;
+
+    [SerializeField] NavMeshAgent agente;
     
     public GameObject jugador;
     public bool atacando;
@@ -33,8 +36,9 @@ public class Enemigo_CQC : MonoBehaviour
 
     public void Comportamiento_Enemigo()
     {
-        if(Vector3.Distance(transform.position, jugador.transform.position)>5)
+        if(Vector3.Distance(transform.position, jugador.transform.position)>5) //Modo de patrulla del enemigo (movimiento aleatorio por el escenario)
         {
+            agente.enabled = false;
             animator.SetBool("rage", false);
             verificacionRage=false;
             cronometro += 1 * Time.deltaTime;
@@ -72,12 +76,12 @@ public class Enemigo_CQC : MonoBehaviour
             }
             else
             {
-                if(Vector3.Distance(transform.position, jugador.transform.position) > 1 && !atacando)
+
+                agente.SetDestination(jugador.transform.position);
+                if (Vector3.Distance(transform.position, jugador.transform.position) > 1 && !atacando)
                 {
                     
-                    transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 3);
                     animator.SetBool("walk", true);
-                    transform.Translate(Vector3.forward * 2 * Time.deltaTime);
                     animator.SetBool("attack", false);
                 }
                 else
@@ -94,12 +98,18 @@ public class Enemigo_CQC : MonoBehaviour
     {
         verificacionRage = true;
         animator.SetBool("rage", false);
+        agente.enabled = true;
     }
 
     public void DesactivarAttack()
     {
+        if (Vector3.Distance(transform.position, jugador.transform.position) > 5 + 0.2f)
+        {
+            animator.SetBool("attack", false);
+        }
         animator.SetBool("attack", false) ;
         atacando = false;
+        agente.enabled = true;
         rango.GetComponent<CapsuleCollider>().enabled = true;
     }
 }

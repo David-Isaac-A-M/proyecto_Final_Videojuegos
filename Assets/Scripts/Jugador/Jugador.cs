@@ -32,13 +32,13 @@ public class Jugador : MonoBehaviour
         {
             if (mira)
             {
-                Projectile_Manager._Instance.FireProjectileForward("Projectile_Fire", mira);
+                Projectile_Manager._Instance.FireProjectileForward("Projectile_Bullet_S", mira);
             }
         }
         else
         if (boquilla)
         {
-            Projectile_Manager._Instance.FireProjectileForward("Projectile_Fire", boquilla);
+            Projectile_Manager._Instance.FireProjectileForward("Projectile_Bullet_S", boquilla);
         }
     }
 

@@ -6,10 +6,15 @@ public class Jugador : MonoBehaviour
 {
     [SerializeField] Transform boquilla;
     [SerializeField] Transform mira;
+    [SerializeField] int salud;
+
+    public float tiempoInvulnerabilidad = 1;
+
+    private bool invulneravilidad = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        invulneravilidad = false;
     }
 
     // Update is called once per frame
@@ -39,17 +44,30 @@ public class Jugador : MonoBehaviour
 
     private void OnTriggerEnter(Collider colision)
     {
-        if (colision.tag=="enemigo")
+        Debug.Log("Algo entro en mi triger");
+        Debug.Log("El tag del objeto que entro en el triger es: " + colision.gameObject.tag);
+        //Debug.Log("El valor de invulneravilidad es: " + invulneravilidad.ToString());
+        if (colision.tag=="enemigo" && !invulneravilidad)
         {
-            Debug.Log("Impacto recivido");
+            Debug.Log("Impacto recibido en el Triger enter");
+            invulneravilidad = true;
+            salud -= 1;
+            Debug.Log("Mi salud actual es: " + salud.ToString());
+            Invoke("DesactivarInvulnerabilidad", 2);
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag =="enemigo")
+        if (collision.gameObject.tag == "enemigo" && invulneravilidad == false)
         {
-            Debug.Log("Impacto recivido");
+            Debug.Log("Impacto recibido en el colision enter");
+            //Invoke("DesactivarInvulnerabilidad",tiempoInvulnerabilidad);
         }
+    }
+
+    public void DesactivarInvulnerabilidad()
+    {
+        invulneravilidad=false;
     }
 }

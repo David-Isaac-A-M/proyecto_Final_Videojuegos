@@ -7,7 +7,7 @@ public class Jugador : MonoBehaviour
     [SerializeField] Transform boquilla;
     [SerializeField] Transform mira;
     [SerializeField] int salud;
-
+    [SerializeField] hud hud;
     public float tiempoInvulnerabilidad = 1;
 
     private bool invulneravilidad = false;
@@ -15,6 +15,7 @@ public class Jugador : MonoBehaviour
     void Start()
     {
         invulneravilidad = false;
+        hud.ActualizarVidaMaxima(salud);
     }
 
     // Update is called once per frame
@@ -55,6 +56,10 @@ public class Jugador : MonoBehaviour
             if(salud <= 0)
             {
                 Destroy(gameObject);
+            }
+            else
+            {
+                hud.ActualizarVida(salud);
             }
             Debug.Log("Mi salud actual es: " + salud.ToString());
             Invoke("DesactivarInvulnerabilidad", 2);

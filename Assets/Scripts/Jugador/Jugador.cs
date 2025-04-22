@@ -52,6 +52,10 @@ public class Jugador : MonoBehaviour
             Debug.Log("Impacto recibido en el Triger enter");
             invulneravilidad = true;
             salud -= 1;
+            if(salud <= 0)
+            {
+                Destroy(gameObject);
+            }
             Debug.Log("Mi salud actual es: " + salud.ToString());
             Invoke("DesactivarInvulnerabilidad", 2);
         }

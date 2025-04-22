@@ -454,6 +454,7 @@
 "Assets/Rango_Enemigo.cs"
 "Assets/Scripts/Enemigos/Enemigo_CQC.cs"
 "Assets/Scripts/Enemigos/Enemigo_Rango.cs"
+"Assets/Scripts/Jugador/Disparo.cs"
 "Assets/Scripts/Jugador/Jugador.cs"
 -langversion:9.0
 /deterministic

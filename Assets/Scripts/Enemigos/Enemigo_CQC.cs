@@ -17,7 +17,7 @@ public class Enemigo_CQC : MonoBehaviour
 
     public NavMeshAgent agente;
     [SerializeField] int salud;
-    
+    [SerializeField] int rangoVision;
     public GameObject jugador;
     public bool atacando;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -37,7 +37,7 @@ public class Enemigo_CQC : MonoBehaviour
 
     public void Comportamiento_Enemigo()
     {
-        if(Vector3.Distance(transform.position, jugador.transform.position)>5) //Modo de patrulla del enemigo (movimiento aleatorio por el escenario)
+        if(Vector3.Distance(transform.position, jugador.transform.position)> rangoVision) //Modo de patrulla del enemigo (movimiento aleatorio por el escenario)
         {
             agente.enabled = false;
             animator.SetBool("rage", false);

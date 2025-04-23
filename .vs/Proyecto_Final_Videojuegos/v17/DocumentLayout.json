@@ -11,16 +11,16 @@
       "RelativeMoniker": "D:0:0:{9AEDE2E7-1E51-7814-4472-F9A805AD87AB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\jugador\\hud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AEDE2E7-1E51-7814-4472-F9A805AD87AB}|Assembly-CSharp.csproj|C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\assets\\scripts\\jugador\\disparo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AEDE2E7-1E51-7814-4472-F9A805AD87AB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\jugador\\disparo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AEDE2E7-1E51-7814-4472-F9A805AD87AB}|Assembly-CSharp.csproj|C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\assets\\scripts\\enemigos\\enemigo_cqc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AEDE2E7-1E51-7814-4472-F9A805AD87AB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemigos\\enemigo_cqc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AEDE2E7-1E51-7814-4472-F9A805AD87AB}|Assembly-CSharp.csproj|C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\assets\\scripts\\enemigos\\enemigo_rango.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AEDE2E7-1E51-7814-4472-F9A805AD87AB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemigos\\enemigo_rango.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AEDE2E7-1E51-7814-4472-F9A805AD87AB}|Assembly-CSharp.csproj|c:\\users\\famil\\proyecto_final_videojuegos\\assets\\scripts\\enemigos\\enemigo_cqc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AEDE2E7-1E51-7814-4472-F9A805AD87AB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemigos\\enemigo_cqc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AEDE2E7-1E51-7814-4472-F9A805AD87AB}|Assembly-CSharp.csproj|C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\assets\\scripts\\jugador\\disparo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AEDE2E7-1E51-7814-4472-F9A805AD87AB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\jugador\\disparo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AEDE2E7-1E51-7814-4472-F9A805AD87AB}|Assembly-CSharp.csproj|C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\assets\\sci-fi styled modular pack\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -48,14 +48,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Jugador\\hud.cs",
               "ToolTip": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Scripts\\Jugador\\hud.cs",
               "RelativeToolTip": "Assets\\Scripts\\Jugador\\hud.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABjAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowB4AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T22:02:20.71Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Disparo.cs",
               "DocumentMoniker": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Scripts\\Jugador\\Disparo.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Jugador\\Disparo.cs",
@@ -63,8 +63,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Jugador\\Disparo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T19:35:05.23Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T19:35:05.23Z"
             },
             {
               "$type": "Document",
@@ -74,10 +73,9 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemigos\\Enemigo_Rango.cs",
               "ToolTip": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Scripts\\Enemigos\\Enemigo_Rango.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemigos\\Enemigo_Rango.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBEAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T20:40:08.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T20:40:08.921Z"
             },
             {
               "$type": "Document",
@@ -87,23 +85,22 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Jugador\\Jugador.cs",
               "ToolTip": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Scripts\\Jugador\\Jugador.cs",
               "RelativeToolTip": "Assets\\Scripts\\Jugador\\Jugador.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAwwC8AAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-20T23:25:43.597Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Enemigo_CQC.cs",
               "DocumentMoniker": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Scripts\\Enemigos\\Enemigo_CQC.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemigos\\Enemigo_CQC.cs",
               "ToolTip": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Scripts\\Enemigos\\Enemigo_CQC.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemigos\\Enemigo_CQC.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAxwHYAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAowFAAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T21:59:39.439Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T21:59:39.439Z"
             },
             {
               "$type": "Document",

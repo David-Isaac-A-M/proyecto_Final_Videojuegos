@@ -15,6 +15,7 @@ public class Enemigo_Rango : MonoBehaviour
             animator.SetBool("walk", false);
             animator.SetBool("attack", true);
             enemigo.atacando = true;
+            enemigo.agente.enabled = false;
             GetComponent<CapsuleCollider>().enabled = false;
         }
     }

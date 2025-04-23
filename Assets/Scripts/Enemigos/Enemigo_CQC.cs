@@ -14,9 +14,8 @@ public class Enemigo_CQC : MonoBehaviour
     public Enemigo_Rango rango;
 
     private bool verificacionRage;
-    private bool vivo;
 
-    [SerializeField] NavMeshAgent agente;
+    public NavMeshAgent agente;
     [SerializeField] int salud;
     
     public GameObject jugador;
@@ -28,7 +27,6 @@ public class Enemigo_CQC : MonoBehaviour
         jugador = GameObject.FindWithTag("jugador");
         verificacionRage = false;
         atacando = false;
-        vivo = true;
     }
 
     // Update is called once per frame
@@ -79,8 +77,9 @@ public class Enemigo_CQC : MonoBehaviour
             }
             else
             {
+                if(agente.enabled)
+                    agente.SetDestination(jugador.transform.position);
 
-                agente.SetDestination(jugador.transform.position);
                 if (Vector3.Distance(transform.position, jugador.transform.position) > 1 && !atacando)
                 {
                     
@@ -122,7 +121,6 @@ public class Enemigo_CQC : MonoBehaviour
         if (salud <= 0) 
         {
             Debug.Log("Me mori");
-            vivo = false;
             animator.SetBool("death", true );
         }
     }

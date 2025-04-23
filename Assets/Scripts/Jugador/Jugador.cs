@@ -88,10 +88,27 @@ public class Jugador : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Si choque");
         if (collision.gameObject.tag == "enemigo" && invulneravilidad == false)
         {
             Debug.Log("Impacto recibido en el colision enter");
             //Invoke("DesactivarInvulnerabilidad",tiempoInvulnerabilidad);
+        }
+        if(collision.gameObject.CompareTag("botiquin"))
+        {
+            botiquines += 1;
+            hud.ActualizarBotiquines(botiquines);
+            Destroy(collision.gameObject);
+        }
+        if(collision.gameObject.CompareTag("municion"))
+        {
+            municiones += 20;
+            hud.ActualizarMuniciones(municiones);
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("basura"))
+        {
+            Destroy(collision.gameObject);
         }
     }
 

@@ -71,20 +71,30 @@ public class Jugador : MonoBehaviour
         if (colision.tag=="enemigo" && !invulneravilidad)
         {
             Debug.Log("Impacto recibido en el Triger enter");
-            invulneravilidad = true;
-            salud -= 1;
-            if(salud <= 0)
-            {
-                Destroy(gameObject);
-            }
-            else
-            {
-                hud.ActualizarVida(salud);
-            }
+
+            RecibirDaño();
+
             Debug.Log("Mi salud actual es: " + salud.ToString());
-            Invoke("DesactivarInvulnerabilidad", 2);
+            
         }
     }
+
+    public void RecibirDaño()
+    {
+        invulneravilidad = true;
+        salud -= 1;
+        if (salud <= 0)
+        {
+            //Destroy(gameObject);
+        }
+        else
+        {
+            hud.ActualizarVida(salud);
+        }
+
+        Invoke("DesactivarInvulnerabilidad", 2);
+    }
+
 
     private void OnCollisionEnter(Collision collision)
     {

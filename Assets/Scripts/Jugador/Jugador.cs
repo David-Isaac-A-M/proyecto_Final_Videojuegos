@@ -32,7 +32,7 @@ public class Jugador : MonoBehaviour
         }
         if(Input.GetButtonDown("Heal") && botiquines>0)
         {
-            Debug.Log("curando");
+            //Debug.Log("curando");
             botiquines -= 1;
             Curar(saludMax-salud);
             hud.ActualizarBotiquines(botiquines);
@@ -65,16 +65,16 @@ public class Jugador : MonoBehaviour
 
     private void OnTriggerEnter(Collider colision)
     {
-        Debug.Log("Algo entro en mi triger");
-        Debug.Log("El tag del objeto que entro en el triger es: " + colision.gameObject.tag);
+        //Debug.Log("Algo entro en mi triger");
+        //Debug.Log("El tag del objeto que entro en el triger es: " + colision.gameObject.tag);
         //Debug.Log("El valor de invulneravilidad es: " + invulneravilidad.ToString());
         if (colision.tag=="enemigo" && !invulneravilidad)
         {
-            Debug.Log("Impacto recibido en el Triger enter");
+            //Debug.Log("Impacto recibido en el Triger enter");
 
             RecibirDaño();
 
-            Debug.Log("Mi salud actual es: " + salud.ToString());
+            //Debug.Log("Mi salud actual es: " + salud.ToString());
             
         }
     }
@@ -98,10 +98,10 @@ public class Jugador : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Si choque");
+        //Debug.Log("Si choque");
         if (collision.gameObject.tag == "enemigo" && invulneravilidad == false)
         {
-            Debug.Log("Impacto recibido en el colision enter");
+            //Debug.Log("Impacto recibido en el colision enter");
             //Invoke("DesactivarInvulnerabilidad",tiempoInvulnerabilidad);
         }
         if(collision.gameObject.CompareTag("botiquin"))

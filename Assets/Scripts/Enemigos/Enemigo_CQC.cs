@@ -18,6 +18,8 @@ public class Enemigo_CQC : MonoBehaviour
     public NavMeshAgent agente;
     [SerializeField] int salud;
     [SerializeField] int rangoVision;
+    
+    
     public GameObject jugador;
     public bool atacando;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

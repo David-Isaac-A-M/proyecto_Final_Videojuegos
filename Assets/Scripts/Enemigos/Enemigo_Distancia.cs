@@ -23,18 +23,26 @@ public class Enemigo_Distancia : MonoBehaviour
 
     private bool enfriamiento;
     private bool girando;
+    private bool fijarAnimacion;
+    private bool set;
     private float tiempoSinVerJugador = 0f;
     private float tiempoMaximoSinVerJugador = 2f; // segundos
     private Transform objetivoActual;
     private Vector3 posicionAntesDePerseguir;
+    private Vector3 posicionAnterior;
+    private Animator animator;
     private EstadoEnemigo estadoActual;
 
     void Start()
     {
         enfriamiento = false;
+        fijarAnimacion = false;
+        set = false; 
         objetivoActual = puntoB;
         girando = true;
         estadoActual = EstadoEnemigo.Patrullando;
+        animator = GetComponent<Animator>();
+        posicionAnterior = transform.position;
     }
 
     void Update()
@@ -64,16 +72,8 @@ public class Enemigo_Distancia : MonoBehaviour
                 break;
         }
 
+        ActualizarAnimaciones();
         
-        RaycastHit hit;
-        if(Physics.Raycast(origenRayo,direccion,out hit, maxDistance))
-        {
-            if(hit.collider.CompareTag("jugador") && !enfriamiento)
-            {
-                //ShootPlayer();
-            }
-            //Debug.Log("Impactó con: " + hit.collider.name);
-        }
         
 
     }
@@ -96,6 +96,7 @@ public class Enemigo_Distancia : MonoBehaviour
                 Ray ray = new Ray(transform.position, direccionJugador.normalized);
                 if (Physics.Raycast(ray, out RaycastHit hit, rangoVision))
                 {
+                    Debug.Log("Algo choco en mi cono de vision");
                     if (hit.collider.CompareTag("jugador") || hit.collider.CompareTag("disparo_enemigo"))
                     {
                         jugadorDetectado = true;
@@ -108,27 +109,9 @@ public class Enemigo_Distancia : MonoBehaviour
                         }
 
                         estadoActual = EstadoEnemigo.PersiguiendoJugador;
-                        //return;
+                        DispararJugador();
                     }
                 }
-            }
-            else //El codigo de estos else es el mismo, quizas se pueda juntar todo, hay que considerarlo
-            {
-                //Debug.Log("No veo al desgraciado");
-                if (estadoActual == EstadoEnemigo.PersiguiendoJugador) //Si lo estaba persiguiendo
-                {
-                    //Debug.Log("Se me hizo mago");
-                    //estadoActual = EstadoEnemigo.Regresando;
-                }
-            }
-        }
-        else //Si no lo ve
-        {
-            //Debug.Log("No veo al desgraciado");
-            if (estadoActual == EstadoEnemigo.PersiguiendoJugador) //Si lo estaba persiguiendo
-            {
-                Debug.Log("Se me hizo mago");
-                //estadoActual = EstadoEnemigo.Regresando;
             }
         }
 
@@ -145,6 +128,8 @@ public class Enemigo_Distancia : MonoBehaviour
             }
         }
     }
+
+    
 
     void Patrullar()
     {
@@ -209,18 +194,103 @@ public class Enemigo_Distancia : MonoBehaviour
         */
     }
 
-    void ShootPlayer()
+    void DispararJugador()
     {
-        //Vector3 playerDirection = playerPosition.position - transform.position;
-        enfriamiento= true;
-        Projectile_Manager._Instance.FireProjectileForward("Projectile_Bullet_L", spawnBulletPoint);
-        Invoke("DesactivarEnfriamiento", 1);
+        Vector3 origenRayo = spawnBulletPoint.position;
 
+        // Dirección horizontal hacia el jugador (ignorando la diferencia en Y)
+        Vector3 direccionJugador = playerPosition.position - origenRayo;
+        direccionJugador.y = 0f; // Eliminar inclinación vertical
+        direccionJugador = direccionJugador.normalized;
+
+        // Hacer que el spawnBulletPoint mire al jugador horizontalmente
+        if (direccionJugador != Vector3.zero)
+        {
+            spawnBulletPoint.rotation = Quaternion.LookRotation(direccionJugador);
+        }
+
+        // Verificar si el jugador está dentro del rango y ángulo de visión
+        float distanciaAlJugador = Vector3.Distance(origenRayo, playerPosition.position);
+        float angulo = Vector3.Angle(spawnBulletPoint.forward, direccionJugador);
+
+        if (distanciaAlJugador <= maxDistance && angulo <= anguloVision / 2f)
+        {
+            // Realizar raycast en la dirección corregida
+            if (Physics.Raycast(origenRayo, spawnBulletPoint.forward, out RaycastHit hit, maxDistance))
+            {
+                if (hit.collider.CompareTag("jugador") && !enfriamiento)
+                {
+                    enfriamiento = true;
+                    //Projectile_Manager._Instance.FireProjectileForward("Projectile_Bullet_L", spawnBulletPoint);
+                    Invoke("DesactivarEnfriamiento", 1f);
+                }
+            }
+        }
+    }
+
+    void ActualizarAnimaciones()
+    {
+        Vector3 desplazamiento = transform.position - posicionAnterior;
+        Vector3 direccionLocal = transform.InverseTransformDirection(desplazamiento);
+
+        float velocidadZ = direccionLocal.z;
+        float velocidadX = direccionLocal.x;
+
+        bool moviendoAdelante = velocidadZ > 0.01f;
+        bool moviendoAtras = velocidadZ < -0.01f;
+        bool moviendoLateral = Mathf.Abs(velocidadX) > 0.01f;
+
+        if (moviendoAdelante)
+        {
+            if (!set)
+            {
+                animator.SetBool("forward", true);
+                animator.SetBool("backward", false);
+                set = true;
+            }
+        }
+        else if (moviendoAtras)
+        {
+            if (!set)
+            {
+                animator.SetBool("forward", false);
+                animator.SetBool("backward", true);
+                set = true;
+            }
+        }
+        else if (moviendoLateral)
+        {
+            // Si deseas agregar animaciones laterales, aquí puedes extender con "left" y "right"
+            // Por ahora, si solo tienes forward/backward, las ignoramos o tratamos como forward
+            if (!set)
+            {
+                animator.SetBool("forward", true);
+                animator.SetBool("backward", false);
+                set = true;
+            }
+        }
+        else
+        {
+            if (set)
+            {
+                animator.SetBool("forward", false);
+                animator.SetBool("backward", false);
+                animator.SetBool("set", false);
+                set = false;
+            }
+        }
+
+        posicionAnterior = transform.position;
     }
 
     void DesactivarEnfriamiento()
     {
         enfriamiento = false;
+    }
+
+    void AlternarFijacionAnimacion()
+    {
+        animator.SetBool("set", true);
     }
 
     void GirarHacia(Vector3 destino)
@@ -252,11 +322,19 @@ public class Enemigo_Distancia : MonoBehaviour
 
     public void RecibirDaño()
     {
+        
         salud -= 1;
+        Debug.Log("Salud enemigo actual: " + salud);
         if (salud <= 0)
         {
-            Destroy(gameObject);
+            animator.SetBool("death", true);
+            
         }
+    }
+
+    void DestuirEnemigo()
+    {
+        Destroy(gameObject);
     }
     //Esto es exclusivamente para pruebas y puede ser comentado o borrado cuando no se necesite.
     void OnDrawGizmosSelected()

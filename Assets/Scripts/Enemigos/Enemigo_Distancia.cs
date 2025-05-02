@@ -221,7 +221,7 @@ public class Enemigo_Distancia : MonoBehaviour
                 if (hit.collider.CompareTag("jugador") && !enfriamiento)
                 {
                     enfriamiento = true;
-                    //Projectile_Manager._Instance.FireProjectileForward("Projectile_Bullet_L", spawnBulletPoint);
+                    Projectile_Manager._Instance.FireProjectileForward("Projectile_Bullet_L", spawnBulletPoint);
                     Invoke("DesactivarEnfriamiento", 1f);
                 }
             }

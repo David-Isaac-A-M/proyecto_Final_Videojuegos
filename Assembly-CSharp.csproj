@@ -68,6 +68,7 @@
     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\BasicBehaviour.cs" />
     <Compile Include="Assets\@PaulosCreations\ProjectileSystem\Demo\Scripts\FireProjectile.cs" />
     <Compile Include="Assets\3rdPerson+Fly\Scripts\LevelScripts\ControlsTutorial.cs" />
+    <Compile Include="Assets\Scripts\UI\PasarNivel.cs" />
     <Compile Include="Assets\3rdPerson+Fly\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Enemigos\Enemigo_Rango.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />

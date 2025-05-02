@@ -6,10 +6,10 @@ public class Jugador : MonoBehaviour
 {
     [SerializeField] Transform boquilla;
     [SerializeField] Transform mira;
-    [SerializeField] int salud;
+    public int salud;
     [SerializeField] int saludMax;
-    [SerializeField] int botiquines;
-    [SerializeField] int municiones;
+    public int botiquines;
+    public int municiones;
     [SerializeField] hud hud;
     public float tiempoInvulnerabilidad = 1;
 
@@ -17,10 +17,29 @@ public class Jugador : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        municiones = PlayerPrefs.GetInt("municiones");
+        if(municiones == 0)
+        {
+            municiones = 10;
+        }
+        botiquines = PlayerPrefs.GetInt("botiquines");
+        if(botiquines == 0)
+        {
+            botiquines = 3;
+        }
+        
+        salud = PlayerPrefs.GetInt("salud");
+        
+        if(salud == 1)
+        {
+            salud = saludMax;
+        }
+        
         invulneravilidad = false;
-        hud.ActualizarVidaMaxima(salud);
+        hud.ActualizarVidaMaxima(saludMax);
         hud.ActualizarMuniciones(municiones);
         hud.ActualizarBotiquines(botiquines);
+        hud.ActualizarVida(salud);
     }
 
     // Update is called once per frame
@@ -83,6 +102,7 @@ public class Jugador : MonoBehaviour
     {
         invulneravilidad = true;
         salud -= 1;
+        Debug.Log("Me pegan y me quedan: " + salud.ToString());
         if (salud <= 0)
         {
             //Destroy(gameObject);

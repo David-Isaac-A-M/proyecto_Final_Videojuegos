@@ -59,15 +59,15 @@ public class Enemigo_Distancia : MonoBehaviour
         switch(estadoActual)
         {
             case EstadoEnemigo.Patrullando:
-                Debug.Log("patrullando");
+                //Debug.Log("patrullando");
                 Patrullar();
                 break;
             case EstadoEnemigo.PersiguiendoJugador:
-                Debug.Log("Persiguiendo");
+                //Debug.Log("Persiguiendo");
                 PerseguirJugador();
                 break;
             case EstadoEnemigo.Regresando:
-                Debug.Log("Reiniciando patrulla");
+                //Debug.Log("Reiniciando patrulla");
                 VolverAPatrullar();
                 break;
         }
@@ -96,13 +96,13 @@ public class Enemigo_Distancia : MonoBehaviour
                 Ray ray = new Ray(transform.position, direccionJugador.normalized);
                 if (Physics.Raycast(ray, out RaycastHit hit, rangoVision))
                 {
-                    Debug.Log("Algo choco en mi cono de vision");
+                    //Debug.Log("Algo choco en mi cono de vision");
                     if (hit.collider.CompareTag("jugador") || hit.collider.CompareTag("disparo_enemigo"))
                     {
                         jugadorDetectado = true;
                         tiempoSinVerJugador = 0;
                         string etiqueta = hit.collider.tag;
-                        Debug.Log("el collider del Raycast es: " + etiqueta);
+                        //Debug.Log("el collider del Raycast es: " + etiqueta);
                         if (estadoActual != EstadoEnemigo.PersiguiendoJugador)
                         {
                             posicionAntesDePerseguir = transform.position;
@@ -119,7 +119,7 @@ public class Enemigo_Distancia : MonoBehaviour
         {
             if(estadoActual == EstadoEnemigo.PersiguiendoJugador && (tiempoSinVerJugador > tiempoMaximoSinVerJugador))
             {
-                Debug.Log("Ya se fue el jugador");
+                //Debug.Log("Ya se fue el jugador");
                 estadoActual = EstadoEnemigo.Regresando;
             }
             else
@@ -220,6 +220,7 @@ public class Enemigo_Distancia : MonoBehaviour
             {
                 if (hit.collider.CompareTag("jugador") && !enfriamiento)
                 {
+                    //Debug.Log("Debo disparar");
                     enfriamiento = true;
                     Projectile_Manager._Instance.FireProjectileForward("Projectile_Bullet_L", spawnBulletPoint);
                     Invoke("DesactivarEnfriamiento", 1f);

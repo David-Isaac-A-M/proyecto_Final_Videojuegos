@@ -25,6 +25,7 @@ public class Enemigo_Distancia : MonoBehaviour
     private bool girando;
     private bool fijarAnimacion;
     private bool set;
+    private bool vivo;
     private float tiempoSinVerJugador = 0f;
     private float tiempoMaximoSinVerJugador = 2f; // segundos
     private Transform objetivoActual;
@@ -40,6 +41,7 @@ public class Enemigo_Distancia : MonoBehaviour
         set = false; 
         objetivoActual = puntoB;
         girando = true;
+        vivo = true;
         estadoActual = EstadoEnemigo.Patrullando;
         animator = GetComponent<Animator>();
         posicionAnterior = transform.position;
@@ -47,34 +49,36 @@ public class Enemigo_Distancia : MonoBehaviour
 
     void Update()
     {
-        Vector3 origenRayo = spawnBulletPoint.position;
-        Vector3 direccion = spawnBulletPoint.forward;
-        //Este codigo sirve para ver el raycast que se genra para el disparo, descomente si va a cambiar la maxDistance u otro aspecto
-        Debug.DrawRay(origenRayo, direccion * maxDistance, Color.red);
-        //playerPosition = GameObject.FindWithTag("jugador").transform;
-
-
-        DetectarJugador();
-
-        switch(estadoActual)
+        if (vivo) 
         {
-            case EstadoEnemigo.Patrullando:
-                //Debug.Log("patrullando");
-                Patrullar();
-                break;
-            case EstadoEnemigo.PersiguiendoJugador:
-                //Debug.Log("Persiguiendo");
-                PerseguirJugador();
-                break;
-            case EstadoEnemigo.Regresando:
-                //Debug.Log("Reiniciando patrulla");
-                VolverAPatrullar();
-                break;
-        }
+            Vector3 origenRayo = spawnBulletPoint.position;
+            Vector3 direccion = spawnBulletPoint.forward;
+            //Este codigo sirve para ver el raycast que se genra para el disparo, descomente si va a cambiar la maxDistance u otro aspecto
+            Debug.DrawRay(origenRayo, direccion * maxDistance, Color.red);
+            //playerPosition = GameObject.FindWithTag("jugador").transform;
 
+
+            DetectarJugador();
+
+            switch (estadoActual)
+            {
+                case EstadoEnemigo.Patrullando:
+                    //Debug.Log("patrullando");
+                    Patrullar();
+                    break;
+                case EstadoEnemigo.PersiguiendoJugador:
+                    //Debug.Log("Persiguiendo");
+                    PerseguirJugador();
+                    break;
+                case EstadoEnemigo.Regresando:
+                    //Debug.Log("Reiniciando patrulla");
+                    VolverAPatrullar();
+                    break;
+            }
+        }
         ActualizarAnimaciones();
-        
-        
+
+
 
     }
 
@@ -328,6 +332,7 @@ public class Enemigo_Distancia : MonoBehaviour
         Debug.Log("Salud enemigo actual: " + salud);
         if (salud <= 0)
         {
+            vivo = false;
             animator.SetBool("death", true);
             
         }
@@ -338,6 +343,7 @@ public class Enemigo_Distancia : MonoBehaviour
         Destroy(gameObject);
     }
     //Esto es exclusivamente para pruebas y puede ser comentado o borrado cuando no se necesite.
+    /*
     void OnDrawGizmosSelected()
     {
         if (playerPosition == null) return;
@@ -353,6 +359,6 @@ public class Enemigo_Distancia : MonoBehaviour
         Gizmos.DrawLine(transform.position, transform.position + leftLimit * rangoVision);
         Gizmos.DrawLine(transform.position, transform.position + rightLimit * rangoVision);
     }
-
+    */
     
 }

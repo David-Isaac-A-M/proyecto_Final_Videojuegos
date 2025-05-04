@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638819107892438036
-    m_Hash: 2511545788
+      ticks: 638819403020416481
+    m_Hash: 3696519252
   m_LockFileStatus:
     m_FilePath: C:/Users/Famil/Proyecto_Final_Videojuegos/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638819107892438036
-    m_Hash: 300452152
+      ticks: 638819403020494041
+    m_Hash: 944645063
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,6 +22,72 @@ m_LocalPackages:
 m_ProjectPath: C:/Users/Famil/Proyecto_Final_Videojuegos/Packages
 m_EditorVersion: 6000.0.35f1 (9a3bc604008a)
 m_ResolvedPackages:
+- packageId: com.rlabrecque.steamworks.net@https://github.com/rlabrecque/Steamworks.NET.git?path=/com.rlabrecque.steamworks.net#2024.8.0
+  testable: 0
+  isDirectDependency: 1
+  version: 2024.8.0
+  source: 5
+  resolvedPath: C:\Users\Famil\Proyecto_Final_Videojuegos\Library\PackageCache\com.rlabrecque.steamworks.net@4f4794de2ce8
+  assetPath: Packages/com.rlabrecque.steamworks.net
+  name: com.rlabrecque.steamworks.net
+  displayName: Steamworks.NET
+  author:
+    name: Riley Labrecque
+    email: support@rileylabrecque.com
+    url: https://steamworks.github.io
+  category: 
+  type: 
+  description: Steamworks.NET is a C# Wrapper for Valve's Steamworks API.
+  errors: []
+  versions:
+    all: []
+    compatible: []
+    recommended: 
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - steam
+  - steamworks
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: git+https://github.com/rlabrecque/Steamworks.NET.git?path=/com.rlabrecque.steamworks.net
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: a2fc889ab2672981ec3e6225d551d86ce6923121
+    revision: 2024.8.0
+  upmReserved: 
+  assetStore:
+    productId: 
+  fingerprint: 4f4794de2ce860210e1e3fca24edcdf7e18b2328
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 
+    minimumUnityVersion: 2019.4.0a1
 - packageId: com.unity.ai.navigation@2.0.5
   testable: 0
   isDirectDependency: 1

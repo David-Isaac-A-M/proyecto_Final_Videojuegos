@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class PasarNivel : MonoBehaviour
+using PurrNet;
+public class PasarNivel : NetworkBehaviour
 {
     Jugador jugador;
     private void OnTriggerEnter(Collider other)
@@ -9,11 +9,18 @@ public class PasarNivel : MonoBehaviour
         if(other.CompareTag("jugador"))
         {
             jugador = other.GetComponent<Jugador>();
-            PlayerPrefs.SetInt("municiones", jugador.municiones);
-            PlayerPrefs.SetInt("botiquines", jugador.botiquines);
-            PlayerPrefs.SetInt("salud", jugador.salud);
-            Debug.Log("La municion del jugador es: " + jugador.municiones);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            CambiarEscena();
         }
+    }
+
+    [ObserversRpc]
+    private void CambiarEscena()
+    {
+
+        PlayerPrefs.SetInt("municiones", jugador.municiones);
+        PlayerPrefs.SetInt("botiquines", jugador.botiquines);
+        PlayerPrefs.SetInt("salud", jugador.salud);
+        Debug.Log("La municion del jugador es: " + jugador.municiones);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

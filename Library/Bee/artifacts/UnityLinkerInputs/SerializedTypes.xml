@@ -12,15 +12,43 @@
 		<type fullname="PurrNet.OwnershipGameObjectToggle" preserve="nothing" serialized="true"/>
 		<type fullname="PurrNet.OwnershipRules" preserve="nothing" serialized="true"/>
 		<type fullname="PurrNet.RpcRules" preserve="nothing" serialized="true"/>
+		<type fullname="PurrNet.SerializableDictionary`2" preserve="nothing" serialized="true"/>
 		<type fullname="PurrNet.SpawnRules" preserve="nothing" serialized="true"/>
 		<type fullname="PurrNet.TransformSyncMode" preserve="nothing" serialized="true"/>
 		<type fullname="PurrNet.VisibilityRules" preserve="nothing" serialized="true"/>
 	</assembly>
+	<assembly fullname="PurrNetLobbySetup">
+		<type fullname="PurrLobby.FriendUser" preserve="nothing" serialized="true"/>
+		<type fullname="PurrLobby.Lobby" preserve="nothing" serialized="true"/>
+		<type fullname="PurrLobby.LobbyManager/CreateRoomArgs" preserve="nothing" serialized="true"/>
+		<type fullname="PurrLobby.LobbyManager/FriendFilter" preserve="nothing" serialized="true"/>
+		<type fullname="PurrLobby.LobbyUser" preserve="nothing" serialized="true"/>
+	</assembly>
+	<assembly fullname="Unity.InputSystem">
+		<type fullname="UnityEngine.InputSystem.InputAction" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.InputSystem.InputActionMap" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.InputSystem.InputBinding" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.InputSystem.InputControlScheme" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.InputSystem.InputControlScheme/DeviceRequirement" preserve="nothing" serialized="true"/>
+	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime">
+		<type fullname="UnityEngine.Rendering.BoolParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.ClampedFloatParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.ClampedIntParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.ColorParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.MinFloatParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.TextureParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.UI.DebugUIPrefabBundle" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.Vector2Parameter" preserve="nothing" serialized="true"/>
 	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Universal.Runtime">
+		<type fullname="UnityEngine.Rendering.Universal.DownscaleParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.Universal.HDRACESPresetParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.Universal.MotionBlurModeParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.Universal.MotionBlurQualityParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.Universal.NeutralRangeReductionModeParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.Universal.TemporalAA/Settings" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.Universal.TonemappingModeParameter" preserve="nothing" serialized="true"/>
 	</assembly>
 	<assembly fullname="Unity.TextMeshPro">
 		<type fullname="TMPro.FaceInfo_Legacy" preserve="nothing" serialized="true"/>
@@ -30,6 +58,11 @@
 		<type fullname="TMPro.TMP_Character" preserve="nothing" serialized="true"/>
 		<type fullname="TMPro.TMP_FontFeatureTable" preserve="nothing" serialized="true"/>
 		<type fullname="TMPro.TMP_FontWeightPair" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_InputField/OnChangeEvent" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_InputField/SelectionEvent" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_InputField/SubmitEvent" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_InputField/TextSelectionEvent" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_InputField/TouchScreenKeyboardEvent" preserve="nothing" serialized="true"/>
 		<type fullname="TMPro.TMP_Sprite" preserve="nothing" serialized="true"/>
 		<type fullname="TMPro.TMP_SpriteCharacter" preserve="nothing" serialized="true"/>
 		<type fullname="TMPro.TMP_SpriteGlyph" preserve="nothing" serialized="true"/>
@@ -40,6 +73,8 @@
 		<type fullname="UnityEngine.Events.ArgumentCache" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Events.PersistentCallGroup" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Events.PersistentListenerMode" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Events.UnityEvent" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Events.UnityEvent`1" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.RectOffset" preserve="nothing" serialized="true"/>
 	</assembly>
 	<assembly fullname="UnityEngine.TextCoreFontEngineModule">

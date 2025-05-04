@@ -9,6 +9,16 @@
     "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.35f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\BuiltInPackagesCombined.sha1"
   ],
   "outputs": {
+    "com.rlabrecque.steamworks.net@https://github.com/rlabrecque/Steamworks.NET.git?path=/com.rlabrecque.steamworks.net#2024.8.0": {
+      "name": "com.rlabrecque.steamworks.net",
+      "displayName": "Steamworks.NET",
+      "resolvedPath": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Library\\PackageCache\\com.rlabrecque.steamworks.net@4f4794de2ce8",
+      "fingerprint": "4f4794de2ce860210e1e3fca24edcdf7e18b2328",
+      "editorCompatibility": "2019.4.0a1",
+      "version": "2024.8.0",
+      "source": "git",
+      "testable": false
+    },
     "com.unity.ai.navigation@2.0.5": {
       "name": "com.unity.ai.navigation",
       "displayName": "AI Navigation",

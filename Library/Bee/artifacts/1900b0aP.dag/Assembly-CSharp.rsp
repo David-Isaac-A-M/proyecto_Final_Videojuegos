@@ -116,6 +116,7 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER
+-define:STEAMWORKS_NET
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"Assets/PurrNet/Externals/7zip/K4os.Compression.LZ4.dll"
@@ -318,9 +319,12 @@
 -r:"Library/PackageCache/com.unity.ext.nunit@60ef35ffd3cd/net40/unity-custom/nunit.framework.dll"
 -r:"Library/PackageCache/com.unity.nuget.newtonsoft-json@74deb55db2a0/Runtime/AOT/Newtonsoft.Json.dll"
 -r:"Library/PackageCache/com.unity.visualscripting@1b53f46e931b/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/com.rlabrecque.steamworks.net.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/LiteNetLib.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/PurrNet.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/PurrNet.Steam.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/PurrNetLobbySetup.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/PurrNetLobby_Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/SimpleWebTransport.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/UniTask.Addressables.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/UniTask.DOTween.ref.dll"

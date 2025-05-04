@@ -127,6 +127,8 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER
+-define:STEAMWORKS_NET
+-define:STEAMWORKS_NET_PACKAGE
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"Assets/PurrNet/Externals/7zip/K4os.Compression.LZ4.dll"
@@ -383,6 +385,7 @@
 -r:"Library/PackageCache/com.unity.visualscripting@1b53f46e931b/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll"
 -r:"Library/PackageCache/com.unity.visualscripting@1b53f46e931b/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll"
 -r:"Library/PackageCache/com.unity.visualscripting@1b53f46e931b/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/com.rlabrecque.steamworks.net.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/PurrNet.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"

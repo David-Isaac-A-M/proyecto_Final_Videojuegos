@@ -29,7 +29,7 @@
       "DisplayName": "Writing 6097564273297756792.rsp",
       "ActionType": "WriteFile",
       "PayloadOffset": 83,
-      "PayloadLength": 7496,
+      "PayloadLength": 7792,
       "PayloadDebugContentSnippet": "-a=\"C:\\Users\\Famil\\Proyecto_Fi",
       "Inputs": [],
       "InputFlags": [],
@@ -51,9 +51,12 @@
         "Assets/PurrNet/Externals/7zip/K4os.Compression.LZ4.dll",
         "Assets/PurrNet/Externals/7zip/System.Runtime.CompilerServices.Unsafe.dll",
         "Library/ScriptAssemblies/Assembly-CSharp.dll",
+        "Library/ScriptAssemblies/com.rlabrecque.steamworks.net.dll",
         "Library/ScriptAssemblies/LiteNetLib.dll",
         "Library/ScriptAssemblies/PurrNet.Runtime.dll",
         "Library/ScriptAssemblies/PurrNet.Steam.Runtime.dll",
+        "Library/ScriptAssemblies/PurrNetLobby_Editor.dll",
+        "Library/ScriptAssemblies/PurrNetLobbySetup.dll",
         "Library/ScriptAssemblies/SimpleWebTransport.dll",
         "Library/ScriptAssemblies/UniTask.Addressables.dll",
         "Library/ScriptAssemblies/UniTask.dll",
@@ -103,6 +106,9 @@
         "Library/Bee/artifacts/rsp/6097564273297756792.rsp"
       ],
       "InputFlags": [
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -355,6 +361,9 @@
       "File": "Library/ScriptAssemblies/Assembly-CSharp.dll"
     },
     {
+      "File": "Library/ScriptAssemblies/com.rlabrecque.steamworks.net.dll"
+    },
+    {
       "File": "Library/ScriptAssemblies/LiteNetLib.dll"
     },
     {
@@ -362,6 +371,12 @@
     },
     {
       "File": "Library/ScriptAssemblies/PurrNet.Steam.Runtime.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/PurrNetLobbySetup.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/PurrNetLobby_Editor.dll"
     },
     {
       "File": "Library/ScriptAssemblies/SimpleWebTransport.dll"

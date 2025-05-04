@@ -6,9 +6,13 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - AimBehaviourBasic
     - BasicBehaviour
+    - Disparo
+    - Enemigo_CQC
     - Enemigo_Distancia
+    - Enemigo_Rango
     - Jugador
     - MoveBehaviour
+    - Paulos.Projectiles.Projectile_Controller
     - Paulos.Projectiles.Projectile_Impact
     - Paulos.Projectiles.Projectile_Manager
     - ThirdPersonOrbitCamBasic
@@ -26,6 +30,10 @@ ScriptsOnlyBuild:
     - PurrNet.PlayerSpawner
     - PurrNet.PurrSceneInfo
     - PurrNet.Transports.UDPTransport
+    Unity.AI.Navigation.Editor.dll:
+    - Unity.AI.Navigation.Editor.NavMeshAssetManager
+    Unity.AI.Navigation.dll:
+    - Unity.AI.Navigation.NavMeshSurface
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
@@ -104,10 +112,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -198,17 +204,23 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
   - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_Distancia
-    methodName: "RecibirDa\xF1o"
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
   - assembly: Assembly-CSharp
     fullTypeName: Enemigo_Distancia
     methodName: "RecibirDa\xF1o"
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
   - assembly: Assembly-CSharp
     fullTypeName: Jugador
     methodName: "RecibirDa\xF1o"
   - assembly: Assembly-CSharp
     fullTypeName: Enemigo_Distancia
     methodName: "RecibirDa\xF1o"
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
     methodName: OnAction
@@ -302,113 +314,117 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 14942}
+      Script: {instanceID: 1802}
     - Class: 114
-      Script: {instanceID: 15118}
+      Script: {instanceID: 14944}
     - Class: 114
-      Script: {instanceID: 15384}
+      Script: {instanceID: 15120}
     - Class: 114
-      Script: {instanceID: 15616}
+      Script: {instanceID: 15386}
     - Class: 114
-      Script: {instanceID: 15774}
+      Script: {instanceID: 15618}
     - Class: 114
-      Script: {instanceID: 15778}
+      Script: {instanceID: 15776}
     - Class: 114
-      Script: {instanceID: 15912}
+      Script: {instanceID: 15780}
     - Class: 114
-      Script: {instanceID: 16074}
+      Script: {instanceID: 15914}
     - Class: 114
-      Script: {instanceID: 16130}
+      Script: {instanceID: 16076}
     - Class: 114
-      Script: {instanceID: 16272}
+      Script: {instanceID: 16132}
     - Class: 114
-      Script: {instanceID: 16536}
+      Script: {instanceID: 16274}
     - Class: 114
-      Script: {instanceID: 16572}
+      Script: {instanceID: 16538}
     - Class: 114
-      Script: {instanceID: 17118}
+      Script: {instanceID: 16574}
     - Class: 114
-      Script: {instanceID: 17176}
+      Script: {instanceID: 17120}
     - Class: 114
-      Script: {instanceID: 17342}
+      Script: {instanceID: 17178}
     - Class: 114
-      Script: {instanceID: 17438}
+      Script: {instanceID: 17344}
     - Class: 114
-      Script: {instanceID: 17580}
+      Script: {instanceID: 17440}
     - Class: 114
-      Script: {instanceID: 17672}
+      Script: {instanceID: 17582}
     - Class: 114
-      Script: {instanceID: 17710}
+      Script: {instanceID: 17674}
     - Class: 114
-      Script: {instanceID: 17766}
+      Script: {instanceID: 17712}
     - Class: 114
-      Script: {instanceID: 17800}
+      Script: {instanceID: 17768}
     - Class: 114
-      Script: {instanceID: 17832}
+      Script: {instanceID: 17802}
     - Class: 114
-      Script: {instanceID: 18132}
+      Script: {instanceID: 17834}
     - Class: 114
-      Script: {instanceID: 18618}
+      Script: {instanceID: 18134}
     - Class: 114
-      Script: {instanceID: 18716}
+      Script: {instanceID: 18620}
     - Class: 114
-      Script: {instanceID: 19048}
+      Script: {instanceID: 18718}
     - Class: 114
-      Script: {instanceID: 19084}
+      Script: {instanceID: 19050}
     - Class: 114
-      Script: {instanceID: 19608}
+      Script: {instanceID: 19086}
     - Class: 114
-      Script: {instanceID: 19766}
+      Script: {instanceID: 19504}
     - Class: 114
-      Script: {instanceID: 19816}
+      Script: {instanceID: 19610}
     - Class: 114
-      Script: {instanceID: 20022}
+      Script: {instanceID: 19768}
     - Class: 114
-      Script: {instanceID: 20086}
+      Script: {instanceID: 19818}
     - Class: 114
-      Script: {instanceID: 20180}
+      Script: {instanceID: 20024}
     - Class: 114
-      Script: {instanceID: 20184}
+      Script: {instanceID: 20088}
     - Class: 114
-      Script: {instanceID: 20248}
+      Script: {instanceID: 20182}
     - Class: 114
-      Script: {instanceID: 20324}
+      Script: {instanceID: 20186}
     - Class: 114
-      Script: {instanceID: 20410}
+      Script: {instanceID: 20250}
     - Class: 114
-      Script: {instanceID: 20522}
+      Script: {instanceID: 20326}
     - Class: 114
-      Script: {instanceID: 21148}
+      Script: {instanceID: 20412}
     - Class: 114
-      Script: {instanceID: 21314}
+      Script: {instanceID: 20524}
     - Class: 114
-      Script: {instanceID: 21340}
+      Script: {instanceID: 21150}
     - Class: 114
-      Script: {instanceID: 21374}
+      Script: {instanceID: 21316}
     - Class: 114
-      Script: {instanceID: 21394}
+      Script: {instanceID: 21342}
     - Class: 114
-      Script: {instanceID: 21446}
+      Script: {instanceID: 21376}
+    - Class: 114
+      Script: {instanceID: 21396}
     - Class: 114
       Script: {instanceID: 21448}
     - Class: 114
-      Script: {instanceID: 21700}
+      Script: {instanceID: 21450}
     - Class: 114
-      Script: {instanceID: 21918}
+      Script: {instanceID: 21702}
     - Class: 114
-      Script: {instanceID: 22468}
+      Script: {instanceID: 21920}
     - Class: 114
-      Script: {instanceID: 22980}
+      Script: {instanceID: 22470}
     - Class: 114
-      Script: {instanceID: 23076}
+      Script: {instanceID: 22982}
     - Class: 114
-      Script: {instanceID: 23900}
+      Script: {instanceID: 23078}
     - Class: 114
-      Script: {instanceID: 24008}
+      Script: {instanceID: 23902}
     - Class: 114
-      Script: {instanceID: 24090}
+      Script: {instanceID: 24010}
     - Class: 114
       Script: {instanceID: 24114}
+    - Class: 114
+      Script: {instanceID: 24446}
     - Class: 114
       Script: {instanceID: 24546}
     - Class: 114
@@ -431,6 +447,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 25614}
     - Class: 114
       Script: {instanceID: 25632}
+    - Class: 114
+      Script: {instanceID: 25702}
     - Class: 114
       Script: {instanceID: 25724}
     - Class: 114
@@ -471,6 +489,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
+    - Class: 195
+      Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
     - Class: 198
@@ -485,7 +505,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
+    - Class: 238
+      Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 1cfe5012f6caaf3b67c8b7ff8b531ad3
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Enemigo_Distancia
   - hash:
       serializedVersion: 2
       Hash: 95c8a8c68e664d4868755f06e7c55997
@@ -1934,12 +1962,6 @@ ScriptsOnlyBuild:
     className: ShadowsMidtonesHighlights
   - hash:
       serializedVersion: 2
-      Hash: 1cfe5012f6caaf3b67c8b7ff8b531ad3
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Enemigo_Distancia
-  - hash:
-      serializedVersion: 2
       Hash: 049f6aa84fe1cb5359c9338e96d0b07e
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -1994,7 +2016,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseDownMessageListener
   - hash:
       serializedVersion: 2
-      Hash: b8323fa383e7a5add70f6ed1fa709659
+      Hash: e3e51c221989f66146273603751966c8
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Enemigo_CQC

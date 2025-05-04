@@ -1,7 +1,11 @@
 <linker>
 	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="Enemigo_CQC">
+			<method name="RecibirDano"/>
+			<method name="RecibirDano"/>
+			<method name="RecibirDano"/>
+		</type>
 		<type fullname="Enemigo_Distancia">
-			<method name="RecibirDaño"/>
 			<method name="RecibirDaño"/>
 			<method name="RecibirDaño"/>
 		</type>

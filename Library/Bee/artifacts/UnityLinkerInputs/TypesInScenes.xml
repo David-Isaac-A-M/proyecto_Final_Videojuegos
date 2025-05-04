@@ -3,7 +3,9 @@
 		<type fullname="AimBehaviourBasic" preserve="nothing"/>
 		<type fullname="BasicBehaviour" preserve="nothing"/>
 		<type fullname="Disparo" preserve="nothing"/>
+		<type fullname="Enemigo_CQC" preserve="nothing"/>
 		<type fullname="Enemigo_Distancia" preserve="nothing"/>
+		<type fullname="Enemigo_Rango" preserve="nothing"/>
 		<type fullname="hud" preserve="nothing"/>
 		<type fullname="Jugador" preserve="nothing"/>
 		<type fullname="MoveBehaviour" preserve="nothing"/>
@@ -25,6 +27,9 @@
 		<type fullname="PurrNet.PlayerSpawner" preserve="nothing"/>
 		<type fullname="PurrNet.PurrSceneInfo" preserve="nothing"/>
 		<type fullname="PurrNet.Transports.UDPTransport" preserve="nothing"/>
+	</assembly>
+	<assembly fullname="Unity.AI.Navigation">
+		<type fullname="Unity.AI.Navigation.NavMeshSurface" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.InputSystem">
 		<type fullname="UnityEngine.InputSystem.InputSettings" preserve="nothing"/>
@@ -108,6 +113,8 @@
 		<type fullname="UnityEditor.TagManager" preserve="nothing"/>
 		<type fullname="UnityEditor.TimeManager" preserve="nothing"/>
 		<type fullname="UnityEditor.VFXManager" preserve="nothing"/>
+		<type fullname="UnityEngine.AI.NavMeshAgent" preserve="nothing"/>
+		<type fullname="UnityEngine.AI.NavMeshData" preserve="nothing"/>
 		<type fullname="UnityEngine.AnimationClip" preserve="nothing"/>
 		<type fullname="UnityEngine.Animator" preserve="nothing"/>
 		<type fullname="UnityEngine.Audio.AudioResource" preserve="nothing"/>

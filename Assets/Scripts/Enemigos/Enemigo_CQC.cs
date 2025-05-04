@@ -20,13 +20,12 @@ public class Enemigo_CQC : MonoBehaviour
     [SerializeField] int rangoVision;
     
     
-    public GameObject jugador;
+    private GameObject jugador;
     public bool atacando;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         animator = GetComponent<Animator>();
-        jugador = GameObject.FindWithTag("jugador");
         verificacionRage = false;
         atacando = false;
     }
@@ -34,6 +33,8 @@ public class Enemigo_CQC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        BuscarJugador();
         Comportamiento_Enemigo();
     }
 
@@ -124,6 +125,23 @@ public class Enemigo_CQC : MonoBehaviour
         {
             Debug.Log("Me mori");
             animator.SetBool("death", true );
+        }
+    }
+
+    void BuscarJugador()
+    {
+        // Solo buscar jugadores si somos el dueño del enemigo (MasterClient)
+        GameObject[] jugadores = GameObject.FindGameObjectsWithTag("jugador");
+        float menorDistancia = float.MaxValue;
+
+        foreach (var j in jugadores)
+        {
+            float distancia = Vector3.Distance(transform.position, j.transform.position);
+            if (distancia < menorDistancia)
+            {
+                menorDistancia = distancia;
+                jugador = j;
+            }
         }
     }
 

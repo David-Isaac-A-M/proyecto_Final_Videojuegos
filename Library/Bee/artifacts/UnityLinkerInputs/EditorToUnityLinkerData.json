@@ -48,7 +48,21 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "Enemigo_CQC",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "Enemigo_Distancia",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Enemigo_Rango",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -320,6 +334,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Unity.AI.Navigation.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Unity.AI.Navigation.NavMeshSurface",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "AnimatorController",
             "fullManagedTypeName": "UnityEditor.Animations.AnimatorController",
@@ -392,6 +413,24 @@
             "fullManagedTypeName": "UnityEditor.VFXManager",
             "moduleName": "VFX",
             "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "NavMeshAgent",
+            "fullManagedTypeName": "UnityEngine.AI.NavMeshAgent",
+            "moduleName": "AI",
+            "usedInScenes": [
+                "Assets/Scenes/Pruebas Aisladas.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "NavMeshData",
+            "fullManagedTypeName": "UnityEngine.AI.NavMeshData",
+            "moduleName": "AI",
+            "usedInScenes": [
+                "Assets/Scenes/Pruebas Aisladas.unity"
+            ]
         },
         {
             "managedAssemblyName": "UnityEngine.dll",

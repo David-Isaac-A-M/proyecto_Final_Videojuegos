@@ -1,5 +1,6 @@
 using Paulos.Projectiles;
 using UnityEngine;
+using PurrNet;
 using UnityEngine.AI;
 using static UnityEngine.UI.Image;
 
@@ -19,7 +20,7 @@ public class Enemigo_Distancia : MonoBehaviour
     [SerializeField] Transform spawnBulletPoint;
     [SerializeField] Transform puntoA;
     [SerializeField] Transform puntoB;
-    [SerializeField] Transform playerPosition;
+    
 
     private bool enfriamiento;
     private bool girando;
@@ -28,11 +29,14 @@ public class Enemigo_Distancia : MonoBehaviour
     private bool vivo;
     private float tiempoSinVerJugador = 0f;
     private float tiempoMaximoSinVerJugador = 2f; // segundos
+    private float tiempoMuerto;
+    private Transform playerPosition;
     private Transform objetivoActual;
     private Vector3 posicionAntesDePerseguir;
     private Vector3 posicionAnterior;
     private Animator animator;
     private EstadoEnemigo estadoActual;
+    
 
     void Start()
     {
@@ -76,6 +80,14 @@ public class Enemigo_Distancia : MonoBehaviour
                     break;
             }
         }
+        else
+        {
+            tiempoMuerto += Time.deltaTime;
+            if(tiempoMuerto == 2)
+            {
+                DestuirEnemigo();
+            }
+        }
         ActualizarAnimaciones();
 
 
@@ -84,56 +96,55 @@ public class Enemigo_Distancia : MonoBehaviour
 
     void DetectarJugador()
     {
-        Vector3 direccionJugador = playerPosition.position - transform.position;
-        float distancia = direccionJugador.magnitude;
-        bool jugadorDetectado = false;
+        playerPosition = BuscarJugadorEnRango();
 
-
-        if (distancia <= rangoVision)
+        if (playerPosition != null)
         {
-            //Debug.Log("Te veo, creo");
-            float angulo = Vector3.Angle(transform.forward, direccionJugador.normalized);
-            if (angulo <= anguloVision)
-            {
-                // Comprobar si hay obstáculo con raycast
-                //Debug.Log("Si te veo");
-                Ray ray = new Ray(transform.position, direccionJugador.normalized);
-                if (Physics.Raycast(ray, out RaycastHit hit, rangoVision))
-                {
-                    //Debug.Log("Algo choco en mi cono de vision");
-                    if (hit.collider.CompareTag("jugador") || hit.collider.CompareTag("disparo_enemigo"))
-                    {
-                        jugadorDetectado = true;
-                        tiempoSinVerJugador = 0;
-                        string etiqueta = hit.collider.tag;
-                        //Debug.Log("el collider del Raycast es: " + etiqueta);
-                        if (estadoActual != EstadoEnemigo.PersiguiendoJugador)
-                        {
-                            posicionAntesDePerseguir = transform.position;
-                        }
+            tiempoSinVerJugador = 0;
 
-                        estadoActual = EstadoEnemigo.PersiguiendoJugador;
-                        DispararJugador();
+            if (estadoActual != EstadoEnemigo.PersiguiendoJugador)
+                posicionAntesDePerseguir = transform.position;
+
+            estadoActual = EstadoEnemigo.PersiguiendoJugador;
+            DispararJugador();
+        }
+        else
+        {
+            if (estadoActual == EstadoEnemigo.PersiguiendoJugador && tiempoSinVerJugador > tiempoMaximoSinVerJugador)
+                estadoActual = EstadoEnemigo.Regresando;
+            else
+                tiempoSinVerJugador += Time.deltaTime;
+        }
+    }
+    Transform BuscarJugadorEnRango()
+    {
+        GameObject[] jugadores = GameObject.FindGameObjectsWithTag("jugador");
+
+        foreach (GameObject jugador in jugadores)
+        {
+            Vector3 direccion = jugador.transform.position - transform.position;
+            float distancia = direccion.magnitude;
+
+            if (distancia <= rangoVision)
+            {
+                float angulo = Vector3.Angle(transform.forward, direccion.normalized);
+
+                if (angulo <= anguloVision)
+                {
+                    if (Physics.Raycast(transform.position, direccion.normalized, out RaycastHit hit, rangoVision))
+                    {
+                        if (hit.collider.CompareTag("jugador"))
+                        {
+                            Debug.Log("Encontre un jugador");
+                            return jugador.transform;
+                        }
                     }
                 }
             }
         }
 
-        if (!jugadorDetectado) 
-        {
-            if(estadoActual == EstadoEnemigo.PersiguiendoJugador && (tiempoSinVerJugador > tiempoMaximoSinVerJugador))
-            {
-                //Debug.Log("Ya se fue el jugador");
-                estadoActual = EstadoEnemigo.Regresando;
-            }
-            else
-            {
-                tiempoSinVerJugador += 1 * Time.deltaTime;
-            }
-        }
+        return null;
     }
-
-    
 
     void Patrullar()
     {
@@ -175,59 +186,46 @@ public class Enemigo_Distancia : MonoBehaviour
 
     void PerseguirJugador()
     {
-        
-        Vector3 direccionAlJugador = playerPosition.position - transform.position;
+        if (playerPosition == null) return;
 
-        // Ignorar la diferencia en Y
-        direccionAlJugador.y = altura;
-        direccionAlJugador = direccionAlJugador.normalized;
+        Vector3 direccion = playerPosition.position - transform.position;
+        direccion.y = 0;
+        direccion.Normalize();
 
-        // Offset hacia atrás (mantener distancia)
-        float distanciaDeseada = maxDistance / 2;
-        Vector3 posicionObjetivo = playerPosition.position - direccionAlJugador * distanciaDeseada;
-        posicionObjetivo.y = altura; // asegurar altura constante
-        
-        GirarHacia(playerPosition.position); // mirar al jugador con Y ignorado en rotación también si necesario
-        MoverHacia(posicionObjetivo);
-        
+        Vector3 destino = playerPosition.position - direccion * (maxDistance / 2);
+        destino.y = altura;
 
-        /*
-        Vector3 destino = new Vector3(playerPosition.position.x, altura, playerPosition.position.z);
-        GirarHacia(destino);
+        GirarHacia(playerPosition.position);
         MoverHacia(destino);
-        */
     }
 
     void DispararJugador()
     {
-        Vector3 origenRayo = spawnBulletPoint.position;
+        if (playerPosition == null) return;
 
-        // Dirección horizontal hacia el jugador (ignorando la diferencia en Y)
-        Vector3 direccionJugador = playerPosition.position - origenRayo;
-        direccionJugador.y = 0f; // Eliminar inclinación vertical
-        direccionJugador = direccionJugador.normalized;
+        Vector3 origen = spawnBulletPoint.position;
+        Vector3 direccion = playerPosition.position - origen;
+        direccion.y = 0f;
+        direccion.Normalize();
 
-        // Hacer que el spawnBulletPoint mire al jugador horizontalmente
-        if (direccionJugador != Vector3.zero)
+        if (direccion != Vector3.zero)
+            spawnBulletPoint.rotation = Quaternion.LookRotation(direccion);
+
+        float distancia = Vector3.Distance(origen, playerPosition.position);
+        float angulo = Vector3.Angle(spawnBulletPoint.forward, direccion);
+
+        if (distancia <= maxDistance && angulo <= anguloVision / 2f)
         {
-            spawnBulletPoint.rotation = Quaternion.LookRotation(direccionJugador);
-        }
-
-        // Verificar si el jugador está dentro del rango y ángulo de visión
-        float distanciaAlJugador = Vector3.Distance(origenRayo, playerPosition.position);
-        float angulo = Vector3.Angle(spawnBulletPoint.forward, direccionJugador);
-
-        if (distanciaAlJugador <= maxDistance && angulo <= anguloVision / 2f)
-        {
-            // Realizar raycast en la dirección corregida
-            if (Physics.Raycast(origenRayo, spawnBulletPoint.forward, out RaycastHit hit, maxDistance))
+           
+            if (Physics.Raycast(origen, spawnBulletPoint.forward, out RaycastHit hit, maxDistance))
             {
+                Debug.Log("Algo entro en mi rango de vision");
                 if (hit.collider.CompareTag("jugador") && !enfriamiento)
                 {
-                    //Debug.Log("Debo disparar");
+                    Debug.Log("Disparar al jugador");
                     enfriamiento = true;
                     Projectile_Manager._Instance.FireProjectileForward("Projectile_Bullet_L", spawnBulletPoint);
-                    Invoke("DesactivarEnfriamiento", 1f);
+                    Invoke(nameof(DesactivarEnfriamiento), 1f);
                 }
             }
         }
@@ -332,7 +330,9 @@ public class Enemigo_Distancia : MonoBehaviour
         Debug.Log("Salud enemigo actual: " + salud);
         if (salud <= 0)
         {
+            Debug.Log("Me mori");
             vivo = false;
+            tiempoMuerto = 0f;
             animator.SetBool("death", true);
             
         }
@@ -340,6 +340,7 @@ public class Enemigo_Distancia : MonoBehaviour
 
     void DestuirEnemigo()
     {
+        Debug.Log("Me desintegro");
         Destroy(gameObject);
     }
     //Esto es exclusivamente para pruebas y puede ser comentado o borrado cuando no se necesite.

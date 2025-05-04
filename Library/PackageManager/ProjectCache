@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638805422936094929
-    m_Hash: 1173180775
+      ticks: 638819107892438036
+    m_Hash: 2511545788
   m_LockFileStatus:
     m_FilePath: C:/Users/Famil/Proyecto_Final_Videojuegos/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638805422944894330
-    m_Hash: 3175894866
+      ticks: 638819107892438036
+    m_Hash: 300452152
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -233,9 +233,11 @@ m_ResolvedPackages:
     - 2.5.2
     - 2.6.0
     - 2.7.1
+    - 2.8.1
     compatible:
     - 2.6.0
     - 2.7.1
+    - 2.8.1
     recommended: 2.6.0
     deprecated: []
   dependencies: []

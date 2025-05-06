@@ -30,26 +30,8 @@ ScriptsOnlyBuild:
     - PurrNet.PurrSceneInfo
     - PurrNet.Transports.UDPTransport
     PurrNetLobbySetup.dll:
-    - PurrLobby.BrowseView
-    - PurrLobby.CodeButton
-    - PurrLobby.CreatingRoomView
-    - PurrLobby.FriendEntry
-    - PurrLobby.FriendsList
-    - PurrLobby.JoinButton
-    - PurrLobby.LoadingRoomView
-    - PurrLobby.LobbyEntry
-    - PurrLobby.LobbyList
     - PurrLobby.LobbyManager
-    - PurrLobby.LobbyMemberList
-    - PurrLobby.LobbyView
-    - PurrLobby.MainMenuView
-    - PurrLobby.MemberEntry
     - PurrLobby.Providers.SteamLobbyProvider
-    - PurrLobby.SceneSwitcher
-    - PurrLobby.ViewManager
-    - TextWobbler
-    Unity.AI.Navigation.Editor.dll:
-    - Unity.AI.Navigation.Editor.NavMeshAssetManager
     Unity.AI.Navigation.dll:
     - Unity.AI.Navigation.NavMeshModifier
     - Unity.AI.Navigation.NavMeshSurface
@@ -129,10 +111,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_StyleSheet
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
-    - TMPro.TMP_InputField
-    - TMPro.TMP_Settings
-    - TMPro.TMP_SpriteAsset
-    - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
@@ -164,20 +142,12 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.VerticalLayoutGroup
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
-    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
-    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
-    - UnityEngine.UI.LayoutElement
-    - UnityEngine.UI.Mask
     - UnityEngine.UI.Outline
     - UnityEngine.UI.RawImage
-    - UnityEngine.UI.RectMask2D
-    - UnityEngine.UI.ScrollRect
-    - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Slider
-    - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
     Assembly-CSharp:
     - Paulos.Projectiles.ImpactEvent
@@ -199,7 +169,6 @@ ScriptsOnlyBuild:
     - PurrLobby.FriendUser
     - PurrLobby.Lobby
     - PurrLobby.LobbyManager/CreateRoomArgs
-    - PurrLobby.LobbyManager/FriendFilter
     - PurrLobby.LobbyUser
     Unity.InputSystem:
     - UnityEngine.InputSystem.InputAction
@@ -232,11 +201,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Character
     - TMPro.TMP_FontFeatureTable
     - TMPro.TMP_FontWeightPair
-    - TMPro.TMP_InputField/OnChangeEvent
-    - TMPro.TMP_InputField/SelectionEvent
-    - TMPro.TMP_InputField/SubmitEvent
-    - TMPro.TMP_InputField/TextSelectionEvent
-    - TMPro.TMP_InputField/TouchScreenKeyboardEvent
     - TMPro.TMP_Sprite
     - TMPro.TMP_SpriteCharacter
     - TMPro.TMP_SpriteGlyph
@@ -272,63 +236,84 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
-  - assembly: PurrNetLobbySetup
-    fullTypeName: PurrLobby.FriendEntry
-    methodName: Invite
-  - assembly: PurrNetLobbySetup
-    fullTypeName: PurrLobby.LobbyEntry
-    methodName: OnClick
-  - assembly: PurrNetLobbySetup
-    fullTypeName: PurrLobby.LobbyManager
-    methodName: ToggleLocalReady
-  - assembly: PurrNetLobbySetup
-    fullTypeName: PurrLobby.LobbyManager
-    methodName: CreateRoom
-  - assembly: PurrNetLobbySetup
-    fullTypeName: PurrLobby.ViewManager
-    methodName: OnRoomCreateClicked
-  - assembly: PurrNetLobbySetup
-    fullTypeName: PurrLobby.JoinButton
-    methodName: JoinRoom
-  - assembly: PurrNetLobbySetup
-    fullTypeName: PurrLobby.ViewManager
-    methodName: OnJoiningRoom
-  - assembly: PurrNetLobbySetup
-    fullTypeName: PurrLobby.ViewManager
-    methodName: OnRoomJoined
-  - assembly: PurrNetLobbySetup
-    fullTypeName: PurrLobby.ViewManager
-    methodName: OnRoomLeft
-  - assembly: PurrNetLobbySetup
-    fullTypeName: PurrLobby.LobbyMemberList
-    methodName: OnLobbyLeave
-  - assembly: PurrNetLobbySetup
-    fullTypeName: PurrLobby.ViewManager
-    methodName: OnRoomLeft
-  - assembly: PurrNetLobbySetup
-    fullTypeName: PurrLobby.LobbyMemberList
-    methodName: LobbyDataUpdate
-  - assembly: PurrNetLobbySetup
-    fullTypeName: PurrLobby.LobbyList
-    methodName: Populate
-  - assembly: PurrNetLobbySetup
-    fullTypeName: PurrLobby.FriendsList
-    methodName: Populate
-  - assembly: PurrNetLobbySetup
-    fullTypeName: PurrLobby.SceneSwitcher
-    methodName: SwitchScene
-  - assembly: PurrNetLobbySetup
-    fullTypeName: PurrLobby.LobbyManager
-    methodName: LeaveLobby
-  - assembly: PurrNetLobbySetup
-    fullTypeName: PurrLobby.CodeButton
-    methodName: CopyCode
-  - assembly: PurrNetLobbySetup
-    fullTypeName: PurrLobby.ViewManager
-    methodName: OnLeaveBrowseClicked
-  - assembly: PurrNetLobbySetup
-    fullTypeName: PurrLobby.ViewManager
-    methodName: OnBrowseClicked
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_CQC
+    methodName: RecibirDano
+  - assembly: Assembly-CSharp
+    fullTypeName: Jugador
+    methodName: "RecibirDa\xF1o"
+  - assembly: Assembly-CSharp
+    fullTypeName: Enemigo_Distancia
+    methodName: "RecibirDa\xF1o"
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
     methodName: OnAction
@@ -372,81 +357,6 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
     methodName: ResetDebugManager
   - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Jugador
-    methodName: "RecibirDa\xF1o"
-  - assembly: Assembly-CSharp
     fullTypeName: Enemigo_Distancia
     methodName: "RecibirDa\xF1o"
   - assembly: Assembly-CSharp
@@ -461,87 +371,6 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: Enemigo_Distancia
     methodName: "RecibirDa\xF1o"
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_Distancia
-    methodName: "RecibirDa\xF1o"
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_Distancia
-    methodName: "RecibirDa\xF1o"
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Jugador
-    methodName: "RecibirDa\xF1o"
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_Distancia
-    methodName: "RecibirDa\xF1o"
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_Distancia
-    methodName: "RecibirDa\xF1o"
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_Distancia
-    methodName: "RecibirDa\xF1o"
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_Distancia
-    methodName: "RecibirDa\xF1o"
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_Distancia
-    methodName: "RecibirDa\xF1o"
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_Distancia
-    methodName: "RecibirDa\xF1o"
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_Distancia
-    methodName: "RecibirDa\xF1o"
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_Distancia
-    methodName: "RecibirDa\xF1o"
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_Distancia
-    methodName: "RecibirDa\xF1o"
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_Distancia
-    methodName: "RecibirDa\xF1o"
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Jugador
-    methodName: "RecibirDa\xF1o"
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_Distancia
-    methodName: "RecibirDa\xF1o"
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
-  - assembly: Assembly-CSharp
-    fullTypeName: Enemigo_CQC
-    methodName: RecibirDano
   - assembly: Assembly-CSharp
     fullTypeName: Enemigo_Distancia
     methodName: "RecibirDa\xF1o"
@@ -555,7 +384,7 @@ ScriptsOnlyBuild:
     fullTypeName: Enemigo_Distancia
     methodName: "RecibirDa\xF1o"
   sceneClasses:
-    Assets/PurrLobby/LobbyScenes/LobbySample.unity:
+    Assets/Scenes/Nivel 1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -578,7 +407,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -588,244 +421,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
-    - Class: 96
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 14942}
-    - Class: 114
-      Script: {instanceID: 15118}
-    - Class: 114
-      Script: {instanceID: 15384}
-    - Class: 114
-      Script: {instanceID: 15430}
-    - Class: 114
-      Script: {instanceID: 15616}
-    - Class: 114
-      Script: {instanceID: 15778}
-    - Class: 114
-      Script: {instanceID: 15844}
-    - Class: 114
-      Script: {instanceID: 15912}
-    - Class: 114
-      Script: {instanceID: 16034}
-    - Class: 114
-      Script: {instanceID: 16062}
-    - Class: 114
-      Script: {instanceID: 16130}
-    - Class: 114
-      Script: {instanceID: 16272}
-    - Class: 114
-      Script: {instanceID: 16536}
-    - Class: 114
-      Script: {instanceID: 16756}
-    - Class: 114
-      Script: {instanceID: 17118}
-    - Class: 114
-      Script: {instanceID: 17176}
-    - Class: 114
-      Script: {instanceID: 17240}
-    - Class: 114
-      Script: {instanceID: 17342}
-    - Class: 114
-      Script: {instanceID: 17580}
-    - Class: 114
-      Script: {instanceID: 17672}
-    - Class: 114
-      Script: {instanceID: 17710}
-    - Class: 114
-      Script: {instanceID: 17766}
-    - Class: 114
-      Script: {instanceID: 17800}
-    - Class: 114
-      Script: {instanceID: 17832}
-    - Class: 114
-      Script: {instanceID: 18716}
-    - Class: 114
-      Script: {instanceID: 19036}
-    - Class: 114
-      Script: {instanceID: 19048}
-    - Class: 114
-      Script: {instanceID: 19084}
-    - Class: 114
-      Script: {instanceID: 19706}
-    - Class: 114
-      Script: {instanceID: 19766}
-    - Class: 114
-      Script: {instanceID: 19816}
-    - Class: 114
-      Script: {instanceID: 20022}
-    - Class: 114
-      Script: {instanceID: 20086}
-    - Class: 114
-      Script: {instanceID: 20184}
-    - Class: 114
-      Script: {instanceID: 20218}
-    - Class: 114
-      Script: {instanceID: 20248}
-    - Class: 114
-      Script: {instanceID: 20324}
-    - Class: 114
-      Script: {instanceID: 20410}
-    - Class: 114
-      Script: {instanceID: 20522}
-    - Class: 114
-      Script: {instanceID: 21148}
-    - Class: 114
-      Script: {instanceID: 21340}
-    - Class: 114
-      Script: {instanceID: 21446}
-    - Class: 114
-      Script: {instanceID: 21448}
-    - Class: 114
-      Script: {instanceID: 21700}
-    - Class: 114
-      Script: {instanceID: 21918}
-    - Class: 114
-      Script: {instanceID: 22468}
-    - Class: 114
-      Script: {instanceID: 22502}
-    - Class: 114
-      Script: {instanceID: 22918}
-    - Class: 114
-      Script: {instanceID: 23076}
-    - Class: 114
-      Script: {instanceID: 24114}
-    - Class: 114
-      Script: {instanceID: 24546}
-    - Class: 114
-      Script: {instanceID: 24602}
-    - Class: 114
-      Script: {instanceID: 24886}
-    - Class: 114
-      Script: {instanceID: 24958}
-    - Class: 114
-      Script: {instanceID: 25040}
-    - Class: 114
-      Script: {instanceID: 25058}
-    - Class: 114
-      Script: {instanceID: 25498}
-    - Class: 114
-      Script: {instanceID: 25614}
-    - Class: 114
-      Script: {instanceID: 25616}
-    - Class: 114
-      Script: {instanceID: 25632}
-    - Class: 114
-      Script: {instanceID: 25724}
-    - Class: 114
-      Script: {instanceID: 25866}
-    - Class: 114
-      Script: {instanceID: 25954}
-    - Class: 114
-      Script: {instanceID: 25990}
-    - Class: 114
-      Script: {instanceID: 26158}
-    - Class: 114
-      Script: {instanceID: 26418}
-    - Class: 114
-      Script: {instanceID: 26506}
-    - Class: 114
-      Script: {instanceID: 26738}
-    - Class: 114
-      Script: {instanceID: 26920}
-    - Class: 114
-      Script: {instanceID: 735508}
-    - Class: 114
-      Script: {instanceID: 735516}
-    - Class: 114
-      Script: {instanceID: 735520}
-    - Class: 114
-      Script: {instanceID: 735524}
-    - Class: 114
-      Script: {instanceID: 735532}
-    - Class: 114
-      Script: {instanceID: 735536}
-    - Class: 114
-      Script: {instanceID: 735552}
-    - Class: 114
-      Script: {instanceID: 735556}
-    - Class: 114
-      Script: {instanceID: 735560}
-    - Class: 114
-      Script: {instanceID: 735576}
-    - Class: 114
-      Script: {instanceID: 735580}
-    - Class: 114
-      Script: {instanceID: 735588}
-    - Class: 114
-      Script: {instanceID: 735596}
-    - Class: 114
-      Script: {instanceID: 735602}
-    - Class: 114
-      Script: {instanceID: 735606}
-    - Class: 114
-      Script: {instanceID: 735614}
-    - Class: 114
-      Script: {instanceID: 735618}
-    - Class: 114
-      Script: {instanceID: 735622}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 135
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 198
-      Script: {instanceID: 0}
-    - Class: 199
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    - Class: 225
-      Script: {instanceID: 0}
-    Assets/Scenes/Nivel 1.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
-    - Class: 74
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
+      Script: {instanceID: 0}
+    - Class: 96
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -834,100 +436,204 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 14942}
+      Script: {instanceID: 15230}
     - Class: 114
-      Script: {instanceID: 15430}
+      Script: {instanceID: 15418}
     - Class: 114
-      Script: {instanceID: 15774}
+      Script: {instanceID: 15688}
     - Class: 114
-      Script: {instanceID: 15844}
+      Script: {instanceID: 15734}
     - Class: 114
-      Script: {instanceID: 16034}
+      Script: {instanceID: 15922}
     - Class: 114
-      Script: {instanceID: 16074}
+      Script: {instanceID: 16084}
     - Class: 114
-      Script: {instanceID: 16272}
+      Script: {instanceID: 16088}
     - Class: 114
-      Script: {instanceID: 16572}
+      Script: {instanceID: 16158}
     - Class: 114
-      Script: {instanceID: 16756}
+      Script: {instanceID: 16228}
     - Class: 114
-      Script: {instanceID: 17240}
+      Script: {instanceID: 16350}
     - Class: 114
-      Script: {instanceID: 17438}
+      Script: {instanceID: 16390}
     - Class: 114
-      Script: {instanceID: 17786}
+      Script: {instanceID: 16446}
     - Class: 114
-      Script: {instanceID: 18132}
+      Script: {instanceID: 16590}
     - Class: 114
-      Script: {instanceID: 18618}
+      Script: {instanceID: 16858}
     - Class: 114
-      Script: {instanceID: 19036}
+      Script: {instanceID: 16896}
     - Class: 114
-      Script: {instanceID: 19502}
+      Script: {instanceID: 17094}
     - Class: 114
-      Script: {instanceID: 19608}
+      Script: {instanceID: 17464}
     - Class: 114
-      Script: {instanceID: 19706}
+      Script: {instanceID: 17526}
     - Class: 114
-      Script: {instanceID: 20022}
+      Script: {instanceID: 17594}
     - Class: 114
-      Script: {instanceID: 20086}
+      Script: {instanceID: 17698}
     - Class: 114
-      Script: {instanceID: 20180}
+      Script: {instanceID: 17796}
+    - Class: 114
+      Script: {instanceID: 17944}
+    - Class: 114
+      Script: {instanceID: 18038}
+    - Class: 114
+      Script: {instanceID: 18078}
+    - Class: 114
+      Script: {instanceID: 18136}
+    - Class: 114
+      Script: {instanceID: 18156}
+    - Class: 114
+      Script: {instanceID: 18172}
+    - Class: 114
+      Script: {instanceID: 18204}
+    - Class: 114
+      Script: {instanceID: 18506}
+    - Class: 114
+      Script: {instanceID: 19000}
+    - Class: 114
+      Script: {instanceID: 19098}
+    - Class: 114
+      Script: {instanceID: 19424}
+    - Class: 114
+      Script: {instanceID: 19430}
+    - Class: 114
+      Script: {instanceID: 19474}
+    - Class: 114
+      Script: {instanceID: 19898}
+    - Class: 114
+      Script: {instanceID: 20006}
+    - Class: 114
+      Script: {instanceID: 20104}
+    - Class: 114
+      Script: {instanceID: 20166}
     - Class: 114
       Script: {instanceID: 20218}
     - Class: 114
-      Script: {instanceID: 21314}
+      Script: {instanceID: 20428}
     - Class: 114
-      Script: {instanceID: 21374}
+      Script: {instanceID: 20492}
     - Class: 114
-      Script: {instanceID: 21394}
+      Script: {instanceID: 20586}
     - Class: 114
-      Script: {instanceID: 21700}
+      Script: {instanceID: 20590}
     - Class: 114
-      Script: {instanceID: 21918}
+      Script: {instanceID: 20624}
     - Class: 114
-      Script: {instanceID: 22392}
+      Script: {instanceID: 20654}
     - Class: 114
-      Script: {instanceID: 22918}
+      Script: {instanceID: 20730}
     - Class: 114
-      Script: {instanceID: 22980}
+      Script: {instanceID: 20818}
     - Class: 114
-      Script: {instanceID: 23048}
+      Script: {instanceID: 20932}
     - Class: 114
-      Script: {instanceID: 23900}
+      Script: {instanceID: 21512}
     - Class: 114
-      Script: {instanceID: 24008}
+      Script: {instanceID: 21566}
     - Class: 114
-      Script: {instanceID: 24090}
+      Script: {instanceID: 21744}
     - Class: 114
-      Script: {instanceID: 24446}
+      Script: {instanceID: 21770}
     - Class: 114
-      Script: {instanceID: 24572}
+      Script: {instanceID: 21804}
     - Class: 114
-      Script: {instanceID: 25212}
+      Script: {instanceID: 21824}
     - Class: 114
-      Script: {instanceID: 25616}
+      Script: {instanceID: 21876}
     - Class: 114
-      Script: {instanceID: 25702}
+      Script: {instanceID: 21878}
     - Class: 114
-      Script: {instanceID: 25724}
+      Script: {instanceID: 22140}
     - Class: 114
-      Script: {instanceID: 25738}
+      Script: {instanceID: 22360}
     - Class: 114
-      Script: {instanceID: 25930}
+      Script: {instanceID: 22838}
     - Class: 114
-      Script: {instanceID: 26506}
+      Script: {instanceID: 22914}
     - Class: 114
-      Script: {instanceID: 26984}
+      Script: {instanceID: 23372}
     - Class: 114
-      Script: {instanceID: 27238}
+      Script: {instanceID: 23438}
     - Class: 114
-      Script: {instanceID: 27308}
+      Script: {instanceID: 23506}
+    - Class: 114
+      Script: {instanceID: 23534}
+    - Class: 114
+      Script: {instanceID: 24378}
+    - Class: 114
+      Script: {instanceID: 24490}
+    - Class: 114
+      Script: {instanceID: 24574}
+    - Class: 114
+      Script: {instanceID: 24600}
+    - Class: 114
+      Script: {instanceID: 24942}
+    - Class: 114
+      Script: {instanceID: 25042}
+    - Class: 114
+      Script: {instanceID: 25068}
+    - Class: 114
+      Script: {instanceID: 25098}
+    - Class: 114
+      Script: {instanceID: 25386}
+    - Class: 114
+      Script: {instanceID: 25460}
+    - Class: 114
+      Script: {instanceID: 25544}
+    - Class: 114
+      Script: {instanceID: 25562}
+    - Class: 114
+      Script: {instanceID: 25716}
+    - Class: 114
+      Script: {instanceID: 26010}
+    - Class: 114
+      Script: {instanceID: 26130}
+    - Class: 114
+      Script: {instanceID: 26132}
+    - Class: 114
+      Script: {instanceID: 26148}
+    - Class: 114
+      Script: {instanceID: 26218}
+    - Class: 114
+      Script: {instanceID: 26240}
+    - Class: 114
+      Script: {instanceID: 26254}
+    - Class: 114
+      Script: {instanceID: 26384}
+    - Class: 114
+      Script: {instanceID: 26448}
+    - Class: 114
+      Script: {instanceID: 26472}
+    - Class: 114
+      Script: {instanceID: 26510}
+    - Class: 114
+      Script: {instanceID: 26684}
+    - Class: 114
+      Script: {instanceID: 26740}
+    - Class: 114
+      Script: {instanceID: 26952}
+    - Class: 114
+      Script: {instanceID: 27042}
+    - Class: 114
+      Script: {instanceID: 27278}
+    - Class: 114
+      Script: {instanceID: 27460}
+    - Class: 114
+      Script: {instanceID: 27526}
+    - Class: 114
+      Script: {instanceID: 27788}
+    - Class: 114
+      Script: {instanceID: 27858}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -938,6 +644,10 @@ ScriptsOnlyBuild:
     - Class: 195
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 205
       Script: {instanceID: 0}
@@ -993,71 +703,75 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 14942}
+      Script: {instanceID: 15230}
     - Class: 114
-      Script: {instanceID: 15774}
+      Script: {instanceID: 16084}
     - Class: 114
-      Script: {instanceID: 16074}
+      Script: {instanceID: 16390}
     - Class: 114
-      Script: {instanceID: 16272}
+      Script: {instanceID: 16590}
     - Class: 114
-      Script: {instanceID: 16572}
+      Script: {instanceID: 16896}
     - Class: 114
-      Script: {instanceID: 17438}
+      Script: {instanceID: 17796}
     - Class: 114
-      Script: {instanceID: 18132}
+      Script: {instanceID: 18506}
     - Class: 114
-      Script: {instanceID: 18618}
+      Script: {instanceID: 19000}
     - Class: 114
-      Script: {instanceID: 19502}
+      Script: {instanceID: 19898}
     - Class: 114
-      Script: {instanceID: 19608}
+      Script: {instanceID: 20006}
     - Class: 114
-      Script: {instanceID: 20022}
+      Script: {instanceID: 20428}
     - Class: 114
-      Script: {instanceID: 20086}
+      Script: {instanceID: 20492}
     - Class: 114
-      Script: {instanceID: 20180}
+      Script: {instanceID: 20586}
     - Class: 114
-      Script: {instanceID: 21314}
+      Script: {instanceID: 21512}
     - Class: 114
-      Script: {instanceID: 21374}
+      Script: {instanceID: 21744}
     - Class: 114
-      Script: {instanceID: 21394}
+      Script: {instanceID: 21804}
     - Class: 114
-      Script: {instanceID: 21700}
+      Script: {instanceID: 21824}
     - Class: 114
-      Script: {instanceID: 21918}
+      Script: {instanceID: 22140}
     - Class: 114
-      Script: {instanceID: 22392}
+      Script: {instanceID: 22360}
     - Class: 114
-      Script: {instanceID: 22980}
+      Script: {instanceID: 22838}
     - Class: 114
-      Script: {instanceID: 23900}
+      Script: {instanceID: 23438}
     - Class: 114
-      Script: {instanceID: 24008}
+      Script: {instanceID: 24378}
     - Class: 114
-      Script: {instanceID: 24090}
+      Script: {instanceID: 24490}
     - Class: 114
-      Script: {instanceID: 24446}
+      Script: {instanceID: 24574}
     - Class: 114
-      Script: {instanceID: 24572}
+      Script: {instanceID: 24942}
     - Class: 114
-      Script: {instanceID: 25212}
+      Script: {instanceID: 25068}
     - Class: 114
-      Script: {instanceID: 25724}
+      Script: {instanceID: 25716}
     - Class: 114
-      Script: {instanceID: 25738}
+      Script: {instanceID: 26240}
     - Class: 114
-      Script: {instanceID: 25930}
+      Script: {instanceID: 26254}
     - Class: 114
-      Script: {instanceID: 26506}
+      Script: {instanceID: 26448}
     - Class: 114
-      Script: {instanceID: 26984}
+      Script: {instanceID: 26740}
     - Class: 114
-      Script: {instanceID: 27238}
+      Script: {instanceID: 27042}
     - Class: 114
-      Script: {instanceID: 27308}
+      Script: {instanceID: 27526}
+    - Class: 114
+      Script: {instanceID: 27788}
+    - Class: 114
+      Script: {instanceID: 27858}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1081,274 +795,6 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
-      Script: {instanceID: 0}
-    Assets/Scenes/Nivel 3.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
-    - Class: 74
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
-    - Class: 90
-      Script: {instanceID: 0}
-    - Class: 91
-      Script: {instanceID: 0}
-    - Class: 95
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 111
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 14942}
-    - Class: 114
-      Script: {instanceID: 15774}
-    - Class: 114
-      Script: {instanceID: 16074}
-    - Class: 114
-      Script: {instanceID: 16272}
-    - Class: 114
-      Script: {instanceID: 16572}
-    - Class: 114
-      Script: {instanceID: 17438}
-    - Class: 114
-      Script: {instanceID: 18132}
-    - Class: 114
-      Script: {instanceID: 18618}
-    - Class: 114
-      Script: {instanceID: 19502}
-    - Class: 114
-      Script: {instanceID: 19608}
-    - Class: 114
-      Script: {instanceID: 20022}
-    - Class: 114
-      Script: {instanceID: 20086}
-    - Class: 114
-      Script: {instanceID: 20180}
-    - Class: 114
-      Script: {instanceID: 21314}
-    - Class: 114
-      Script: {instanceID: 21374}
-    - Class: 114
-      Script: {instanceID: 21394}
-    - Class: 114
-      Script: {instanceID: 21700}
-    - Class: 114
-      Script: {instanceID: 21918}
-    - Class: 114
-      Script: {instanceID: 22392}
-    - Class: 114
-      Script: {instanceID: 22980}
-    - Class: 114
-      Script: {instanceID: 23900}
-    - Class: 114
-      Script: {instanceID: 24008}
-    - Class: 114
-      Script: {instanceID: 24090}
-    - Class: 114
-      Script: {instanceID: 24446}
-    - Class: 114
-      Script: {instanceID: 24572}
-    - Class: 114
-      Script: {instanceID: 25212}
-    - Class: 114
-      Script: {instanceID: 25702}
-    - Class: 114
-      Script: {instanceID: 25724}
-    - Class: 114
-      Script: {instanceID: 25738}
-    - Class: 114
-      Script: {instanceID: 25930}
-    - Class: 114
-      Script: {instanceID: 26506}
-    - Class: 114
-      Script: {instanceID: 26984}
-    - Class: 114
-      Script: {instanceID: 27238}
-    - Class: 114
-      Script: {instanceID: 27308}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 136
-      Script: {instanceID: 0}
-    - Class: 137
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 195
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 205
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    - Class: 238
-      Script: {instanceID: 0}
-    Assets/Scenes/Pruebas Aisladas.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
-    - Class: 74
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
-    - Class: 90
-      Script: {instanceID: 0}
-    - Class: 91
-      Script: {instanceID: 0}
-    - Class: 95
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 14942}
-    - Class: 114
-      Script: {instanceID: 15774}
-    - Class: 114
-      Script: {instanceID: 16074}
-    - Class: 114
-      Script: {instanceID: 16272}
-    - Class: 114
-      Script: {instanceID: 16572}
-    - Class: 114
-      Script: {instanceID: 17438}
-    - Class: 114
-      Script: {instanceID: 18132}
-    - Class: 114
-      Script: {instanceID: 18618}
-    - Class: 114
-      Script: {instanceID: 19502}
-    - Class: 114
-      Script: {instanceID: 19608}
-    - Class: 114
-      Script: {instanceID: 20022}
-    - Class: 114
-      Script: {instanceID: 20086}
-    - Class: 114
-      Script: {instanceID: 20180}
-    - Class: 114
-      Script: {instanceID: 21314}
-    - Class: 114
-      Script: {instanceID: 21374}
-    - Class: 114
-      Script: {instanceID: 21394}
-    - Class: 114
-      Script: {instanceID: 21700}
-    - Class: 114
-      Script: {instanceID: 21918}
-    - Class: 114
-      Script: {instanceID: 22392}
-    - Class: 114
-      Script: {instanceID: 22980}
-    - Class: 114
-      Script: {instanceID: 23900}
-    - Class: 114
-      Script: {instanceID: 24008}
-    - Class: 114
-      Script: {instanceID: 24090}
-    - Class: 114
-      Script: {instanceID: 24446}
-    - Class: 114
-      Script: {instanceID: 24572}
-    - Class: 114
-      Script: {instanceID: 25212}
-    - Class: 114
-      Script: {instanceID: 25702}
-    - Class: 114
-      Script: {instanceID: 25724}
-    - Class: 114
-      Script: {instanceID: 25738}
-    - Class: 114
-      Script: {instanceID: 25930}
-    - Class: 114
-      Script: {instanceID: 26506}
-    - Class: 114
-      Script: {instanceID: 26984}
-    - Class: 114
-      Script: {instanceID: 27238}
-    - Class: 114
-      Script: {instanceID: 27308}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 136
-      Script: {instanceID: 0}
-    - Class: 137
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 195
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    - Class: 238
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -1365,10 +811,28 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
+      Hash: caac9f87d31a05f18ea0aee104e61cd4
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: ViewManager
+  - hash:
+      serializedVersion: 2
+      Hash: c480b261b4e31a27b05a37a8100e0c67
+    assemblyName: PurrNetLobby_Editor
+    namespaceName: PurrLobby.Editor
+    className: LobbyManagerEditor
+  - hash:
+      serializedVersion: 2
       Hash: 86dbb17f881954f07ae5bc215856a222
     assemblyName: UniTask
     namespaceName: Cysharp.Threading.Tasks.Triggers
     className: AsyncDestroyTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: 4b912be65f19a347cbc87b5811f7f003
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: MemberEntry
   - hash:
       serializedVersion: 2
       Hash: be6a7898a1957a26cc16f1bfdd69c21e
@@ -1419,6 +883,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerMessageBox
   - hash:
       serializedVersion: 2
+      Hash: 7469e0e83053967e5e77c891b83914bb
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: CreatingRoomView
+  - hash:
+      serializedVersion: 2
       Hash: e061bdd0159a784b8acc0552dd0f40bb
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.Editor
@@ -1465,6 +935,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.UI
     className: InputSystemUIInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: c7e12d5d841c77a8961114493dad238e
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: LobbyEntry
   - hash:
       serializedVersion: 2
       Hash: 8b15e35eb98fc258ec2e839df7c3c9b0
@@ -1695,6 +1171,12 @@ ScriptsOnlyBuild:
     className: TMP_PhoneNumberValidator
   - hash:
       serializedVersion: 2
+      Hash: df2bd6614d9f9c3e61391befc35ac205
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: SceneChangeButton
+  - hash:
+      serializedVersion: 2
       Hash: c4cdb902228df56d5b2b639d6a6bbd3c
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem
@@ -1705,6 +1187,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerUpMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 67b181868cc7d24b0629bfb2526c1a21
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: MainMenuView
   - hash:
       serializedVersion: 2
       Hash: e987953190eb4c12cf19df790566dc2c
@@ -1761,6 +1249,12 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 6965b8d3f10511a432caa8e628c68849
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: JoinButton
+  - hash:
+      serializedVersion: 2
       Hash: 6b2b20d5352b9f1294595326f54bd3c2
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -1797,6 +1291,12 @@ ScriptsOnlyBuild:
     className: StandaloneInputModuleModuleEditor
   - hash:
       serializedVersion: 2
+      Hash: e766fa1ddc5ec0103840b9e4debea635
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby.Providers
+    className: UnityLobbyProvider
+  - hash:
+      serializedVersion: 2
       Hash: 9f27b94c3c17b0da0d39632b61a4b711
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
@@ -1807,6 +1307,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: FireProjectile
+  - hash:
+      serializedVersion: 2
+      Hash: 7d29cb53767033d556c1ac64c5795d96
+    assemblyName: PurrNetLobby_Editor
+    namespaceName: PurrLobby.Editor
+    className: SteamLobbyProviderInspector
   - hash:
       serializedVersion: 2
       Hash: c0a2b4d13675f08bfb211e044c334e68
@@ -1843,6 +1349,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.State
     namespaceName: Unity.VisualScripting
     className: StateMachine
+  - hash:
+      serializedVersion: 2
+      Hash: 1bb01045e2097f49bd71925e1d6bd04a
+    assemblyName: PurrNetLobby_Editor
+    namespaceName: PurrLobby.Editor
+    className: UnityLobbyProviderInspector
+  - hash:
+      serializedVersion: 2
+      Hash: c9dd300a98fc001099d42a1634b26ef2
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: FriendsList
   - hash:
       serializedVersion: 2
       Hash: 3b5263a98bcc71d9a9d1d78a31b34ced
@@ -1959,6 +1477,12 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerStay2DMessageListener
   - hash:
       serializedVersion: 2
+      Hash: dfb1f14fb87cf419998b1e061605dda4
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: LobbyView
+  - hash:
+      serializedVersion: 2
       Hash: c7461ddb2926b22edcbffe17bf941824
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
@@ -1999,6 +1523,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: 58f51542117ee2e7c5ff76b23c355c68
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: LoadingRoomView
   - hash:
       serializedVersion: 2
       Hash: 08e2446b65d2da7600c6bbdd36de0e56
@@ -2205,6 +1735,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerValue
   - hash:
       serializedVersion: 2
+      Hash: eaf332d8ca8026d8bdfe99af006dff0a
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: LobbyDataHolder
+  - hash:
+      serializedVersion: 2
       Hash: 11bfd8e114b0cee733bd68200b989b01
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
@@ -2361,6 +1897,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
+      Hash: 5f60210ecf370155d258c70ee8f315e1
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: LobbyList
+  - hash:
+      serializedVersion: 2
       Hash: 0f5a086d4d028363983ba6ca30a01397
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -2389,6 +1931,12 @@ ScriptsOnlyBuild:
     assemblyName: PurrNet.Runtime
     namespaceName: PurrNet
     className: NoVisibilityRule
+  - hash:
+      serializedVersion: 2
+      Hash: 04b4b151e28d37830bf5ae973fa0a613
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: LobbyManager
   - hash:
       serializedVersion: 2
       Hash: a90f6a00b23520788be7d89ee3b0773d
@@ -2445,10 +1993,10 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerPanel
   - hash:
       serializedVersion: 2
-      Hash: e8d390bd9ecacc453a7500b90d0c0292
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.EventSystems
-    className: Physics2DRaycaster
+      Hash: 81cf990de47defa7f91453f873bfa890
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: SceneSwitcher
   - hash:
       serializedVersion: 2
       Hash: 04f2d6a4db8a670aeb2c87d9ffd08865
@@ -2461,6 +2009,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSubmitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: e8d390bd9ecacc453a7500b90d0c0292
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.EventSystems
+    className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
       Hash: 5a4aa2850fe11587f47e34c270c7fd22
@@ -2559,7 +2113,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 4dc08932a0535b23aa9151d381e103af
+      Hash: 21f888db580c8d85d102b3db71fbd897
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PasarNivel
@@ -2619,6 +2173,12 @@ ScriptsOnlyBuild:
     className: AsyncAwakeTrigger
   - hash:
       serializedVersion: 2
+      Hash: 33bfd4aa6242f05d64048e456af09e72
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: CodeButton
+  - hash:
+      serializedVersion: 2
       Hash: e4b7831f0a9e91f079eb40ea24427631
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
@@ -2641,6 +2201,12 @@ ScriptsOnlyBuild:
     assemblyName: PurrNet.Runtime
     namespaceName: PurrNet.StateMachine
     className: StateMachine
+  - hash:
+      serializedVersion: 2
+      Hash: 554ca1ca80134bf42af975d46c3fa1ee
+    assemblyName: PurrNetLobbySetup
+    namespaceName: 
+    className: TextWobbler
   - hash:
       serializedVersion: 2
       Hash: 38fef0d958faa9732156d113b1ebe9ea
@@ -2821,6 +2387,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: TMP_FrameRateCounter
+  - hash:
+      serializedVersion: 2
+      Hash: 7dc518943926c065042c4ec8d31145c3
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: BrowseView
   - hash:
       serializedVersion: 2
       Hash: ad49e20f31ed572e586aa8bbaafb591b
@@ -3027,6 +2599,12 @@ ScriptsOnlyBuild:
     className: AnimatorMessageListener
   - hash:
       serializedVersion: 2
+      Hash: de4976cbd1c65ac7b78cfa21ce236c2b
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: ConnectedText
+  - hash:
+      serializedVersion: 2
       Hash: 11a492830b189fafb9ed2f7afa464c56
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
@@ -3189,6 +2767,12 @@ ScriptsOnlyBuild:
     className: TextMeshProFloatingText
   - hash:
       serializedVersion: 2
+      Hash: a13c4c1472ca88ea98eb2a1f847be34b
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: LobbyMemberList
+  - hash:
+      serializedVersion: 2
       Hash: ca7965796a6fc0e5baad4cb19f5b5ded
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -3205,6 +2789,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerVector4
+  - hash:
+      serializedVersion: 2
+      Hash: 606343e972406508d5b81b563f227ab5
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby.Providers
+    className: SteamLobbyProvider
   - hash:
       serializedVersion: 2
       Hash: c4ae0ec287bc3cde0bc98e1a65f9cef7
@@ -3247,6 +2837,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: UniversalRenderPipelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 43ad7152d0a58ba6c6ef7bce8820130b
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: FriendEntry
   - hash:
       serializedVersion: 2
       Hash: b747f5d40674055dd70e18552f1b0447
@@ -3369,10 +2965,16 @@ ScriptsOnlyBuild:
     className: Renderer2DData
   - hash:
       serializedVersion: 2
-      Hash: 38326b7868ee2cd3e3f968ed15846535
+      Hash: 4023710185bcd1a6097a26262224af82
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Jugador
+  - hash:
+      serializedVersion: 2
+      Hash: fcf658ae0ea7c9889b8dcfef589a9866
+    assemblyName: PurrNetLobbySetup
+    namespaceName: PurrLobby
+    className: ConnectionStarter
   - hash:
       serializedVersion: 2
       Hash: d82086405f46de14829f6b4bcbdd8fc9
@@ -3397,167 +2999,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: caac9f87d31a05f18ea0aee104e61cd4
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: ViewManager
-  - hash:
-      serializedVersion: 2
-      Hash: c480b261b4e31a27b05a37a8100e0c67
-    assemblyName: PurrNetLobby_Editor
-    namespaceName: PurrLobby.Editor
-    className: LobbyManagerEditor
-  - hash:
-      serializedVersion: 2
-      Hash: 4b912be65f19a347cbc87b5811f7f003
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: MemberEntry
-  - hash:
-      serializedVersion: 2
-      Hash: 7469e0e83053967e5e77c891b83914bb
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: CreatingRoomView
-  - hash:
-      serializedVersion: 2
-      Hash: c7e12d5d841c77a8961114493dad238e
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: LobbyEntry
-  - hash:
-      serializedVersion: 2
-      Hash: df2bd6614d9f9c3e61391befc35ac205
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: SceneChangeButton
-  - hash:
-      serializedVersion: 2
-      Hash: 67b181868cc7d24b0629bfb2526c1a21
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: MainMenuView
-  - hash:
-      serializedVersion: 2
-      Hash: 6965b8d3f10511a432caa8e628c68849
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: JoinButton
-  - hash:
-      serializedVersion: 2
-      Hash: e766fa1ddc5ec0103840b9e4debea635
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby.Providers
-    className: UnityLobbyProvider
-  - hash:
-      serializedVersion: 2
-      Hash: 7d29cb53767033d556c1ac64c5795d96
-    assemblyName: PurrNetLobby_Editor
-    namespaceName: PurrLobby.Editor
-    className: SteamLobbyProviderInspector
-  - hash:
-      serializedVersion: 2
-      Hash: 1bb01045e2097f49bd71925e1d6bd04a
-    assemblyName: PurrNetLobby_Editor
-    namespaceName: PurrLobby.Editor
-    className: UnityLobbyProviderInspector
-  - hash:
-      serializedVersion: 2
-      Hash: c9dd300a98fc001099d42a1634b26ef2
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: FriendsList
-  - hash:
-      serializedVersion: 2
-      Hash: dfb1f14fb87cf419998b1e061605dda4
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: LobbyView
-  - hash:
-      serializedVersion: 2
-      Hash: 58f51542117ee2e7c5ff76b23c355c68
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: LoadingRoomView
-  - hash:
-      serializedVersion: 2
-      Hash: eaf332d8ca8026d8bdfe99af006dff0a
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: LobbyDataHolder
-  - hash:
-      serializedVersion: 2
-      Hash: 5f60210ecf370155d258c70ee8f315e1
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: LobbyList
-  - hash:
-      serializedVersion: 2
-      Hash: 04b4b151e28d37830bf5ae973fa0a613
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: LobbyManager
-  - hash:
-      serializedVersion: 2
-      Hash: 81cf990de47defa7f91453f873bfa890
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: SceneSwitcher
-  - hash:
-      serializedVersion: 2
-      Hash: 33bfd4aa6242f05d64048e456af09e72
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: CodeButton
-  - hash:
-      serializedVersion: 2
-      Hash: 554ca1ca80134bf42af975d46c3fa1ee
-    assemblyName: PurrNetLobbySetup
-    namespaceName: 
-    className: TextWobbler
-  - hash:
-      serializedVersion: 2
-      Hash: 7dc518943926c065042c4ec8d31145c3
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: BrowseView
-  - hash:
-      serializedVersion: 2
-      Hash: de4976cbd1c65ac7b78cfa21ce236c2b
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: ConnectedText
-  - hash:
-      serializedVersion: 2
-      Hash: a13c4c1472ca88ea98eb2a1f847be34b
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: LobbyMemberList
-  - hash:
-      serializedVersion: 2
-      Hash: 606343e972406508d5b81b563f227ab5
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby.Providers
-    className: SteamLobbyProvider
-  - hash:
-      serializedVersion: 2
-      Hash: 43ad7152d0a58ba6c6ef7bce8820130b
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: FriendEntry
-  - hash:
-      serializedVersion: 2
-      Hash: fcf658ae0ea7c9889b8dcfef589a9866
-    assemblyName: PurrNetLobbySetup
-    namespaceName: PurrLobby
-    className: ConnectionStarter
   platform: 19
   scenePathNames:
-  - Assets/PurrLobby/LobbyScenes/LobbySample.unity
   - Assets/Scenes/Nivel 1.unity
   - Assets/Scenes/Nivel 2.unity
-  - Assets/Scenes/Nivel 3.unity
-  - Assets/Scenes/Pruebas Aisladas.unity
   playerPath: D:/Proyecto final videojuegos/Proyecto_Final_Videojuegos.exe

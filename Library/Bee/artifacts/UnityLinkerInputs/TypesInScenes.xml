@@ -30,24 +30,8 @@
 		<type fullname="PurrNet.Transports.UDPTransport" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="PurrNetLobbySetup">
-		<type fullname="PurrLobby.BrowseView" preserve="nothing"/>
-		<type fullname="PurrLobby.CodeButton" preserve="nothing"/>
-		<type fullname="PurrLobby.CreatingRoomView" preserve="nothing"/>
-		<type fullname="PurrLobby.FriendEntry" preserve="nothing"/>
-		<type fullname="PurrLobby.FriendsList" preserve="nothing"/>
-		<type fullname="PurrLobby.JoinButton" preserve="nothing"/>
-		<type fullname="PurrLobby.LoadingRoomView" preserve="nothing"/>
-		<type fullname="PurrLobby.LobbyEntry" preserve="nothing"/>
-		<type fullname="PurrLobby.LobbyList" preserve="nothing"/>
 		<type fullname="PurrLobby.LobbyManager" preserve="nothing"/>
-		<type fullname="PurrLobby.LobbyMemberList" preserve="nothing"/>
-		<type fullname="PurrLobby.LobbyView" preserve="nothing"/>
-		<type fullname="PurrLobby.MainMenuView" preserve="nothing"/>
-		<type fullname="PurrLobby.MemberEntry" preserve="nothing"/>
 		<type fullname="PurrLobby.Providers.SteamLobbyProvider" preserve="nothing"/>
-		<type fullname="PurrLobby.SceneSwitcher" preserve="nothing"/>
-		<type fullname="PurrLobby.ViewManager" preserve="nothing"/>
-		<type fullname="TextWobbler" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.AI.Navigation">
 		<type fullname="Unity.AI.Navigation.NavMeshModifier" preserve="nothing"/>
@@ -125,7 +109,6 @@
 		<type fullname="TMPro.TextMeshProUGUI" preserve="nothing"/>
 		<type fullname="TMPro.TMP_ColorGradient" preserve="nothing"/>
 		<type fullname="TMPro.TMP_FontAsset" preserve="nothing"/>
-		<type fullname="TMPro.TMP_InputField" preserve="nothing"/>
 		<type fullname="TMPro.TMP_Settings" preserve="nothing"/>
 		<type fullname="TMPro.TMP_SpriteAsset" preserve="nothing"/>
 		<type fullname="TMPro.TMP_StyleSheet" preserve="nothing"/>
@@ -156,7 +139,6 @@
 		<type fullname="UnityEngine.BoxCollider" preserve="nothing"/>
 		<type fullname="UnityEngine.Camera" preserve="nothing"/>
 		<type fullname="UnityEngine.Canvas" preserve="nothing"/>
-		<type fullname="UnityEngine.CanvasGroup" preserve="nothing"/>
 		<type fullname="UnityEngine.CanvasRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.CapsuleCollider" preserve="nothing"/>
 		<type fullname="UnityEngine.Collider" preserve="nothing"/>
@@ -207,7 +189,6 @@
 		<type fullname="UnityEngine.UI.Mask" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Outline" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.RawImage" preserve="nothing"/>
-		<type fullname="UnityEngine.UI.RectMask2D" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Scrollbar" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.ScrollRect" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Slider" preserve="nothing"/>

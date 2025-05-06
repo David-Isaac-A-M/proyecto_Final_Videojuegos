@@ -26,32 +26,8 @@
 			<method name="RecibirDano"/>
 			<method name="RecibirDano"/>
 			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
 		</type>
 		<type fullname="Enemigo_Distancia">
-			<method name="RecibirDaño"/>
-			<method name="RecibirDaño"/>
-			<method name="RecibirDaño"/>
-			<method name="RecibirDaño"/>
-			<method name="RecibirDaño"/>
-			<method name="RecibirDaño"/>
-			<method name="RecibirDaño"/>
-			<method name="RecibirDaño"/>
-			<method name="RecibirDaño"/>
-			<method name="RecibirDaño"/>
-			<method name="RecibirDaño"/>
-			<method name="RecibirDaño"/>
 			<method name="RecibirDaño"/>
 			<method name="RecibirDaño"/>
 			<method name="RecibirDaño"/>
@@ -64,49 +40,6 @@
 		<type fullname="Jugador">
 			<method name="RecibirDaño"/>
 			<method name="RecibirDaño"/>
-			<method name="RecibirDaño"/>
-			<method name="RecibirDaño"/>
-		</type>
-	</assembly>
-	<assembly fullname="PurrNetLobbySetup" ignoreIfMissing="1">
-		<type fullname="PurrLobby.CodeButton">
-			<method name="CopyCode"/>
-		</type>
-		<type fullname="PurrLobby.FriendEntry">
-			<method name="Invite"/>
-		</type>
-		<type fullname="PurrLobby.FriendsList">
-			<method name="Populate"/>
-		</type>
-		<type fullname="PurrLobby.JoinButton">
-			<method name="JoinRoom"/>
-		</type>
-		<type fullname="PurrLobby.LobbyEntry">
-			<method name="OnClick"/>
-		</type>
-		<type fullname="PurrLobby.LobbyList">
-			<method name="Populate"/>
-		</type>
-		<type fullname="PurrLobby.LobbyManager">
-			<method name="CreateRoom"/>
-			<method name="LeaveLobby"/>
-			<method name="ToggleLocalReady"/>
-		</type>
-		<type fullname="PurrLobby.LobbyMemberList">
-			<method name="LobbyDataUpdate"/>
-			<method name="OnLobbyLeave"/>
-		</type>
-		<type fullname="PurrLobby.SceneSwitcher">
-			<method name="SwitchScene"/>
-		</type>
-		<type fullname="PurrLobby.ViewManager">
-			<method name="OnBrowseClicked"/>
-			<method name="OnJoiningRoom"/>
-			<method name="OnLeaveBrowseClicked"/>
-			<method name="OnRoomCreateClicked"/>
-			<method name="OnRoomJoined"/>
-			<method name="OnRoomLeft"/>
-			<method name="OnRoomLeft"/>
 		</type>
 	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime" ignoreIfMissing="1">

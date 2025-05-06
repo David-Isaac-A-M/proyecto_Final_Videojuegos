@@ -42,11 +42,8 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -76,11 +73,8 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -110,11 +104,8 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -137,11 +128,8 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -157,11 +145,8 @@
             "fullManagedTypeName": "",
             "moduleName": "AI",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -202,69 +187,6 @@
         {
             "managedAssemblyName": "PurrNetLobbySetup.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "PurrLobby.BrowseView",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "PurrNetLobbySetup.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "PurrLobby.CodeButton",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "PurrNetLobbySetup.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "PurrLobby.CreatingRoomView",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "PurrNetLobbySetup.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "PurrLobby.FriendEntry",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "PurrNetLobbySetup.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "PurrLobby.FriendsList",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "PurrNetLobbySetup.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "PurrLobby.JoinButton",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "PurrNetLobbySetup.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "PurrLobby.LoadingRoomView",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "PurrNetLobbySetup.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "PurrLobby.LobbyEntry",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "PurrNetLobbySetup.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "PurrLobby.LobbyList",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "PurrNetLobbySetup.dll",
-            "nativeClass": "",
             "fullManagedTypeName": "PurrLobby.LobbyManager",
             "moduleName": "",
             "usedInScenes": []
@@ -272,49 +194,7 @@
         {
             "managedAssemblyName": "PurrNetLobbySetup.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "PurrLobby.LobbyMemberList",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "PurrNetLobbySetup.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "PurrLobby.LobbyView",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "PurrNetLobbySetup.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "PurrLobby.MainMenuView",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "PurrNetLobbySetup.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "PurrLobby.MemberEntry",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "PurrNetLobbySetup.dll",
-            "nativeClass": "",
             "fullManagedTypeName": "PurrLobby.Providers.SteamLobbyProvider",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "PurrNetLobbySetup.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "PurrLobby.SceneSwitcher",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "PurrNetLobbySetup.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "PurrLobby.ViewManager",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -431,13 +311,6 @@
             "usedInScenes": []
         },
         {
-            "managedAssemblyName": "PurrNetLobbySetup.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "TextWobbler",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "ThirdPersonOrbitCamBasic",
@@ -462,13 +335,6 @@
             "managedAssemblyName": "Unity.TextMeshPro.dll",
             "nativeClass": "",
             "fullManagedTypeName": "TMPro.TMP_FontAsset",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.TextMeshPro.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "TMPro.TMP_InputField",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -514,9 +380,7 @@
             "moduleName": "Animation",
             "usedInScenes": [
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -546,11 +410,8 @@
             "fullManagedTypeName": "UnityEditor.MonoScript",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -595,9 +456,7 @@
             "moduleName": "AI",
             "usedInScenes": [
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -606,9 +465,7 @@
             "fullManagedTypeName": "UnityEngine.AI.NavMeshData",
             "moduleName": "AI",
             "usedInScenes": [
-                "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 1.unity"
             ]
         },
         {
@@ -618,8 +475,7 @@
             "moduleName": "Animation",
             "usedInScenes": [
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -629,9 +485,7 @@
             "moduleName": "Animation",
             "usedInScenes": [
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -641,9 +495,7 @@
             "moduleName": "Animation",
             "usedInScenes": [
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -652,7 +504,7 @@
             "fullManagedTypeName": "UnityEngine.Audio.AudioResource",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity"
+                "Assets/Scenes/Nivel 1.unity"
             ]
         },
         {
@@ -661,7 +513,7 @@
             "fullManagedTypeName": "UnityEngine.Audio.AudioResource",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity"
+                "Assets/Scenes/Nivel 1.unity"
             ]
         },
         {
@@ -670,11 +522,8 @@
             "fullManagedTypeName": "UnityEngine.AudioBehaviour",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -683,7 +532,7 @@
             "fullManagedTypeName": "UnityEngine.AudioClip",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity"
+                "Assets/Scenes/Nivel 1.unity"
             ]
         },
         {
@@ -692,11 +541,8 @@
             "fullManagedTypeName": "UnityEngine.AudioListener",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -705,7 +551,7 @@
             "fullManagedTypeName": "UnityEngine.AudioSource",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity"
+                "Assets/Scenes/Nivel 1.unity"
             ]
         },
         {
@@ -715,9 +561,7 @@
             "moduleName": "Animation",
             "usedInScenes": [
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -726,11 +570,8 @@
             "fullManagedTypeName": "UnityEngine.Behaviour",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -739,11 +580,8 @@
             "fullManagedTypeName": "UnityEngine.BoxCollider",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -752,11 +590,8 @@
             "fullManagedTypeName": "UnityEngine.Camera",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -765,20 +600,8 @@
             "fullManagedTypeName": "UnityEngine.Canvas",
             "moduleName": "UI",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "CanvasGroup",
-            "fullManagedTypeName": "UnityEngine.CanvasGroup",
-            "moduleName": "UI",
-            "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -787,11 +610,8 @@
             "fullManagedTypeName": "UnityEngine.CanvasRenderer",
             "moduleName": "UI",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -801,9 +621,7 @@
             "moduleName": "Physics",
             "usedInScenes": [
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -812,11 +630,8 @@
             "fullManagedTypeName": "UnityEngine.Collider",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -825,11 +640,8 @@
             "fullManagedTypeName": "UnityEngine.Component",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -838,11 +650,8 @@
             "fullManagedTypeName": "UnityEngine.Cubemap",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -865,11 +674,8 @@
             "fullManagedTypeName": "UnityEngine.Font",
             "moduleName": "TextRendering",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -878,11 +684,8 @@
             "fullManagedTypeName": "UnityEngine.GameObject",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -934,9 +737,7 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -945,11 +746,8 @@
             "fullManagedTypeName": "UnityEngine.LightmapSettings",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -959,8 +757,7 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -969,11 +766,8 @@
             "fullManagedTypeName": "UnityEngine.Material",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -982,11 +776,8 @@
             "fullManagedTypeName": "UnityEngine.Mesh",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -995,8 +786,7 @@
             "fullManagedTypeName": "UnityEngine.MeshCollider",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 1.unity"
             ]
         },
         {
@@ -1005,11 +795,8 @@
             "fullManagedTypeName": "UnityEngine.MeshFilter",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -1018,11 +805,8 @@
             "fullManagedTypeName": "UnityEngine.MeshRenderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -1031,11 +815,8 @@
             "fullManagedTypeName": "UnityEngine.MonoBehaviour",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -1045,9 +826,7 @@
             "moduleName": "Animation",
             "usedInScenes": [
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -1056,11 +835,8 @@
             "fullManagedTypeName": "UnityEngine.Object",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -1069,7 +845,7 @@
             "fullManagedTypeName": "UnityEngine.ParticleSystem",
             "moduleName": "ParticleSystem",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity"
+                "Assets/Scenes/Nivel 1.unity"
             ]
         },
         {
@@ -1078,7 +854,7 @@
             "fullManagedTypeName": "UnityEngine.ParticleSystemRenderer",
             "moduleName": "ParticleSystem",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity"
+                "Assets/Scenes/Nivel 1.unity"
             ]
         },
         {
@@ -1094,11 +870,8 @@
             "fullManagedTypeName": "UnityEngine.RectTransform",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -1107,11 +880,8 @@
             "fullManagedTypeName": "UnityEngine.Renderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -1519,11 +1289,8 @@
             "fullManagedTypeName": "UnityEngine.RenderSettings",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -1532,11 +1299,8 @@
             "fullManagedTypeName": "UnityEngine.Rigidbody",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -1546,9 +1310,7 @@
             "moduleName": "Animation",
             "usedInScenes": [
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -1557,11 +1319,8 @@
             "fullManagedTypeName": "UnityEngine.Shader",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -1571,9 +1330,7 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -1582,7 +1339,7 @@
             "fullManagedTypeName": "UnityEngine.SphereCollider",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity"
+                "Assets/Scenes/Nivel 1.unity"
             ]
         },
         {
@@ -1591,11 +1348,8 @@
             "fullManagedTypeName": "UnityEngine.Sprite",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -1604,11 +1358,8 @@
             "fullManagedTypeName": "UnityEngine.TextAsset",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -1617,11 +1368,8 @@
             "fullManagedTypeName": "UnityEngine.Texture",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -1630,11 +1378,8 @@
             "fullManagedTypeName": "UnityEngine.Texture2D",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -1643,7 +1388,7 @@
             "fullManagedTypeName": "UnityEngine.TrailRenderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity"
+                "Assets/Scenes/Nivel 1.unity"
             ]
         },
         {
@@ -1652,11 +1397,8 @@
             "fullManagedTypeName": "UnityEngine.Transform",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/PurrLobby/LobbyScenes/LobbySample.unity",
                 "Assets/Scenes/Nivel 1.unity",
-                "Assets/Scenes/Nivel 2.unity",
-                "Assets/Scenes/Nivel 3.unity",
-                "Assets/Scenes/Pruebas Aisladas.unity"
+                "Assets/Scenes/Nivel 2.unity"
             ]
         },
         {
@@ -1726,13 +1468,6 @@
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.RawImage",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "UnityEngine.UI.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.UI.RectMask2D",
             "moduleName": "",
             "usedInScenes": []
         },

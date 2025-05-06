@@ -1,6 +1,6 @@
 using UnityEngine;
 using Paulos.Projectiles;
-
+using PurrNet;
 
 public class Jugador : MonoBehaviour
 {

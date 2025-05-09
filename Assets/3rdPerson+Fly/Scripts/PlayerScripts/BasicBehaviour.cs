@@ -20,6 +20,7 @@ public class BasicBehaviour : MonoBehaviour
 	private ThirdPersonOrbitCamBasic camScript;           // Reference to the third person camera script.
 	private bool sprint;                                  // Boolean to determine whether or not the player activated the sprint mode.
 	private bool changedFOV;                              // Boolean to store when the sprint action has changed de camera FOV.
+	private bool derribado;
 	private int hFloat;                                   // Animator variable related to Horizontal Axis.
 	private int vFloat;                                   // Animator variable related to Vertical Axis.
 	private List<GenericBehaviour> behaviours;            // The list containing all the enabled player behaviours.
@@ -55,6 +56,7 @@ public class BasicBehaviour : MonoBehaviour
 		camScript = playerCamera.GetComponent<ThirdPersonOrbitCamBasic> ();
 		rBody = GetComponent<Rigidbody> ();
 
+
 		// Grounded verification variables.
 		groundedBool = Animator.StringToHash("Grounded");
 		colExtents = GetComponent<Collider>().bounds.extents;
@@ -62,63 +64,70 @@ public class BasicBehaviour : MonoBehaviour
 
 	void Update()
 	{
-		// Store the input axes.
-		h = Input.GetAxis("Horizontal");
-		v = Input.GetAxis("Vertical");
-
-		// Set the input axes on the Animator Controller.
-		anim.SetFloat(hFloat, h, 0.1f, Time.deltaTime);
-		anim.SetFloat(vFloat, v, 0.1f, Time.deltaTime);
-
-		// Toggle sprint by input.
-		sprint = Input.GetButton (sprintButton);
-
-		// Set the correct camera FOV for sprint mode.
-		if(IsSprinting())
+		if (!derribado)
 		{
-			changedFOV = true;
-			camScript.SetFOV(sprintFOV);
-		}
-		else if(changedFOV)
-		{
-			camScript.ResetFOV();
-			changedFOV = false;
-		}
-		// Set the grounded test on the Animator Controller.
-		anim.SetBool(groundedBool, IsGrounded());
+            // Store the input axes.
+            h = Input.GetAxis("Horizontal");
+            v = Input.GetAxis("Vertical");
+
+            // Set the input axes on the Animator Controller.
+            anim.SetFloat(hFloat, h, 0.1f, Time.deltaTime);
+            anim.SetFloat(vFloat, v, 0.1f, Time.deltaTime);
+
+            // Toggle sprint by input.
+            sprint = Input.GetButton(sprintButton);
+
+            // Set the correct camera FOV for sprint mode.
+            if (IsSprinting())
+            {
+                changedFOV = true;
+                camScript.SetFOV(sprintFOV);
+            }
+            else if (changedFOV)
+            {
+                camScript.ResetFOV();
+                changedFOV = false;
+            }
+            // Set the grounded test on the Animator Controller.
+            anim.SetBool(groundedBool, IsGrounded());
+        }
 	}
 
 	// Call the FixedUpdate functions of the active or overriding behaviours.
 	void FixedUpdate()
 	{
-		// Call the active behaviour if no other is overriding.
-		bool isAnyBehaviourActive = false;
-		if (behaviourLocked > 0 || overridingBehaviours.Count == 0)
+		if(!derribado)
 		{
-			foreach (GenericBehaviour behaviour in behaviours)
-			{
-				if (behaviour.isActiveAndEnabled && currentBehaviour == behaviour.GetBehaviourCode())
-				{
-					isAnyBehaviourActive = true;
-					behaviour.LocalFixedUpdate();
-				}
-			}
-		}
-		// Call the overriding behaviours if any.
-		else
-		{
-			foreach (GenericBehaviour behaviour in overridingBehaviours)
-			{
-				behaviour.LocalFixedUpdate();
-			}
-		}
+            // Call the active behaviour if no other is overriding.
+            bool isAnyBehaviourActive = false;
+            if (behaviourLocked > 0 || overridingBehaviours.Count == 0)
+            {
+                foreach (GenericBehaviour behaviour in behaviours)
+                {
+                    if (behaviour.isActiveAndEnabled && currentBehaviour == behaviour.GetBehaviourCode())
+                    {
+                        isAnyBehaviourActive = true;
+                        behaviour.LocalFixedUpdate();
+                    }
+                }
+            }
+            // Call the overriding behaviours if any.
+            else
+            {
+                foreach (GenericBehaviour behaviour in overridingBehaviours)
+                {
+                    behaviour.LocalFixedUpdate();
+                }
+            }
 
-		// Ensure the player will stand on ground if no behaviour is active or overriding.
-		if (!isAnyBehaviourActive && overridingBehaviours.Count == 0)
-		{
-			rBody.useGravity = true;
-			Repositioning ();
-		}
+            // Ensure the player will stand on ground if no behaviour is active or overriding.
+            if (!isAnyBehaviourActive && overridingBehaviours.Count == 0)
+            {
+                rBody.useGravity = true;
+                Repositioning();
+            }
+        }
+		
 	}
 
 	// Call the LateUpdate functions of the active or overriding behaviours.
@@ -323,6 +332,11 @@ public class BasicBehaviour : MonoBehaviour
 	{
 		Ray ray = new Ray(this.transform.position + Vector3.up * (2 * colExtents.x), Vector3.down);
 		return Physics.SphereCast(ray, colExtents.x, colExtents.x + 0.2f);
+	}
+
+	public void CambiarDerribado(bool valor)
+	{
+		derribado = valor;
 	}
 }
 

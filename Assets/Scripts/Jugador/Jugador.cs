@@ -16,6 +16,7 @@ public class Jugador : MonoBehaviour
     public bool derribado;
     public bool vivo;
     [SerializeField] hud hud;
+    [SerializeField] BasicBehaviour basic;
     public float tiempoInvulnerabilidad;
     public float tiempoParaReanimar;
     public float rangoInteraccion;
@@ -44,6 +45,7 @@ public class Jugador : MonoBehaviour
         vivo = true;
         derribado = false;
         tiempoReanimando = 0;
+        basic.CambiarDerribado(derribado);
 
         hud.ActualizarVidaMaxima(saludMax);
         hud.ActualizarMuniciones(municiones);
@@ -170,6 +172,7 @@ public class Jugador : MonoBehaviour
             hud.CambiarMensajeEstado("Derribado");
             Debug.Log("Jugador " + name + " ha sido derribado");
             derribado = true;
+            basic.CambiarDerribado(derribado);
         }
 
         Invoke("DesactivarInvulnerabilidad", 2);
@@ -178,6 +181,7 @@ public class Jugador : MonoBehaviour
     public void Revivir()
     {
         derribado = false;
+        basic.CambiarDerribado(derribado);
         salud = saludMax;
         hud.ActualizarVida(salud);
         hud.CambiarMensajeEstado("Jugador reanimado");

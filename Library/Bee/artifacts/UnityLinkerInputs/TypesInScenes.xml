@@ -27,11 +27,16 @@
 		<type fullname="PurrNet.NetworkVisibilityRuleSet" preserve="nothing"/>
 		<type fullname="PurrNet.PlayerSpawner" preserve="nothing"/>
 		<type fullname="PurrNet.PurrSceneInfo" preserve="nothing"/>
+		<type fullname="PurrNet.Transports.PurrTransport" preserve="nothing"/>
 		<type fullname="PurrNet.Transports.UDPTransport" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="PurrNetLobbySetup">
+		<type fullname="PurrLobby.ConnectedText" preserve="nothing"/>
+		<type fullname="PurrLobby.ConnectionStarter" preserve="nothing"/>
 		<type fullname="PurrLobby.LobbyManager" preserve="nothing"/>
 		<type fullname="PurrLobby.Providers.SteamLobbyProvider" preserve="nothing"/>
+		<type fullname="PurrLobby.SceneChangeButton" preserve="nothing"/>
+		<type fullname="TextWobbler" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.AI.Navigation">
 		<type fullname="Unity.AI.Navigation.NavMeshModifier" preserve="nothing"/>

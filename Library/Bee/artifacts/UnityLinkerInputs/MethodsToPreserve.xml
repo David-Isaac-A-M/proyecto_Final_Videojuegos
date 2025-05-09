@@ -40,6 +40,14 @@
 		<type fullname="Jugador">
 			<method name="RecibirDaño"/>
 			<method name="RecibirDaño"/>
+			<method name="RecibirDaño"/>
+		</type>
+	</assembly>
+	<assembly fullname="PurrNetLobbySetup" ignoreIfMissing="1">
+		<type fullname="PurrLobby.SceneChangeButton">
+			<method name="ChangeScene"/>
+			<method name="ChangeScene"/>
+			<method name="ChangeScene"/>
 		</type>
 	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime" ignoreIfMissing="1">

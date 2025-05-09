@@ -6,6 +6,7 @@ public class hud : MonoBehaviour
     [SerializeField] Slider barraVida;
     [SerializeField] TextMeshProUGUI contadorBotiquines;
     [SerializeField] TextMeshProUGUI contadorMunicion;
+    [SerializeField] TextMeshProUGUI mensajeError;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -44,6 +45,11 @@ public class hud : MonoBehaviour
         {
             contador.text = "x" + cantidad.ToString();
         }
+    }
+
+    public void CambiarMensajeEstado(string texto)
+    {
+        mensajeError.text = texto;
     }
 
     public void ActualizarVidaMaxima(int salud)

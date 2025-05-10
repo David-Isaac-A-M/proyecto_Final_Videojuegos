@@ -49,7 +49,7 @@ public class Jugador : NetworkBehaviour
         vivo = true;
         CambiarDerribado(false);
         tiempoReanimando = 0;
-        basic.CambiarDerribado(Derribado);
+        basic.CambiarDerribadoBasic(Derribado);
 
         hud.ActualizarVidaMaxima(saludMax);
         hud.ActualizarMuniciones(municiones);
@@ -59,13 +59,13 @@ public class Jugador : NetworkBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && municiones > 0)
+        if (Input.GetButtonDown("Fire1") && municiones > 0 && !derribado)
         {
             hud.CambiarMensajeEstado("Se disparo el arma");
             Disparar();
         }
 
-        if (Input.GetButtonDown("Heal") && botiquines > 0)
+        if (Input.GetButtonDown("Heal") && botiquines > 0 && !derribado)
         {
             botiquines -= 1;
             Curar(saludMax - salud);
@@ -134,7 +134,7 @@ public class Jugador : NetworkBehaviour
 
             if (tiempoReanimando >= tiempoParaReanimar)
             {
-                objetivoReanimacion.Revivir();
+                objetivoReanimacion.Revivir(objetivoReanimacion);
                 hud.CambiarMensajeEstado("Jugador reanimado");
                 Debug.Log("Jugador reanimado completamente");
                 objetivoReanimacion = null;
@@ -178,19 +178,20 @@ public class Jugador : NetworkBehaviour
             hud.CambiarMensajeEstado("Derribado");
             Debug.Log("Jugador " + name + " ha sido derribado");
             CambiarDerribado(true);
-            basic.CambiarDerribado(Derribado);
+            basic.CambiarDerribadoBasic(true);
         }
 
         Invoke("DesactivarInvulnerabilidad", 2);
     }
 
-    public void Revivir()
+    [ServerRpc]
+    public void Revivir(Jugador J)
     {
-        CambiarDerribado(false);
-        basic.CambiarDerribado(Derribado);
-        salud = saludMax;
-        hud.ActualizarVida(salud);
-        hud.CambiarMensajeEstado("Jugador reanimado");
+        J.CambiarDerribado(false);
+        J.basic.CambiarDerribadoBasic(false);
+        J.salud = saludMax;
+        J.hud.ActualizarVida(salud);
+        J.hud.CambiarMensajeEstado("Jugador reanimado");
         Debug.Log("Jugador " + name + " reanimado completamente");
     }
 
@@ -226,6 +227,7 @@ public class Jugador : NetworkBehaviour
         invulneravilidad = false;
     }
 
+    [ObserversRpc]
     public void CambiarDerribado(bool valor)
     {
         derribado.value = valor;

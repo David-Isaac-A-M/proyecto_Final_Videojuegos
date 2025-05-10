@@ -14,7 +14,6 @@
 		<type fullname="Paulos.Projectiles.Projectile_Controller" preserve="nothing"/>
 		<type fullname="Paulos.Projectiles.Projectile_Impact" preserve="nothing"/>
 		<type fullname="Paulos.Projectiles.Projectile_Manager" preserve="nothing"/>
-		<type fullname="Readme" preserve="nothing"/>
 		<type fullname="ThirdPersonOrbitCamBasic" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="PurrNet.Runtime">

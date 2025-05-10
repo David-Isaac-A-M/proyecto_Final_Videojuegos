@@ -334,7 +334,7 @@ public class BasicBehaviour : MonoBehaviour
 		return Physics.SphereCast(ray, colExtents.x, colExtents.x + 0.2f);
 	}
 
-	public void CambiarDerribado(bool valor)
+	public void CambiarDerribadoBasic(bool valor)
 	{
 		derribado = valor;
 	}

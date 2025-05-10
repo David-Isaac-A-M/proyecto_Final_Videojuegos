@@ -14,6 +14,7 @@
 		<type fullname="PurrNet.RpcRules" preserve="nothing" serialized="true"/>
 		<type fullname="PurrNet.SerializableDictionary`2" preserve="nothing" serialized="true"/>
 		<type fullname="PurrNet.SpawnRules" preserve="nothing" serialized="true"/>
+		<type fullname="PurrNet.SyncVar`1" preserve="nothing" serialized="true"/>
 		<type fullname="PurrNet.TransformSyncMode" preserve="nothing" serialized="true"/>
 		<type fullname="PurrNet.VisibilityRules" preserve="nothing" serialized="true"/>
 	</assembly>

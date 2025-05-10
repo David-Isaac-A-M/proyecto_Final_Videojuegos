@@ -16,6 +16,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Boss",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "BuildSettings",
             "fullManagedTypeName": "",
@@ -317,6 +324,13 @@
             "managedAssemblyName": "PurrNet.Runtime.dll",
             "nativeClass": "",
             "fullManagedTypeName": "PurrNet.Transports.UDPTransport",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Readme",
             "moduleName": "",
             "usedInScenes": []
         },

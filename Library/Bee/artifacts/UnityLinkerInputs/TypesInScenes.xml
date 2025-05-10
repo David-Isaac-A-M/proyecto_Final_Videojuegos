@@ -2,6 +2,7 @@
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="AimBehaviourBasic" preserve="nothing"/>
 		<type fullname="BasicBehaviour" preserve="nothing"/>
+		<type fullname="Boss" preserve="nothing"/>
 		<type fullname="Disparo" preserve="nothing"/>
 		<type fullname="Enemigo_CQC" preserve="nothing"/>
 		<type fullname="Enemigo_Distancia" preserve="nothing"/>
@@ -13,6 +14,7 @@
 		<type fullname="Paulos.Projectiles.Projectile_Controller" preserve="nothing"/>
 		<type fullname="Paulos.Projectiles.Projectile_Impact" preserve="nothing"/>
 		<type fullname="Paulos.Projectiles.Projectile_Manager" preserve="nothing"/>
+		<type fullname="Readme" preserve="nothing"/>
 		<type fullname="ThirdPersonOrbitCamBasic" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="PurrNet.Runtime">

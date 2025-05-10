@@ -3,7 +3,8 @@ using Paulos.Projectiles;
 using PurrNet;
 using System.Collections.Generic;
 
-public class Jugador : MonoBehaviour
+
+public class Jugador : NetworkBehaviour
 {
     public static List<Jugador> TodosLosJugadores = new List<Jugador>();
 
@@ -13,7 +14,10 @@ public class Jugador : MonoBehaviour
     [SerializeField] int saludMax;
     public int botiquines;
     public int municiones;
-    public bool derribado;
+
+
+    [SerializeField] private SyncVar<bool> derribado;
+    public bool Derribado => derribado;
     public bool vivo;
     [SerializeField] hud hud;
     [SerializeField] BasicBehaviour basic;
@@ -43,9 +47,9 @@ public class Jugador : MonoBehaviour
 
         invulneravilidad = false;
         vivo = true;
-        derribado = false;
+        CambiarDerribado(false);
         tiempoReanimando = 0;
-        basic.CambiarDerribado(derribado);
+        basic.CambiarDerribado(Derribado);
 
         hud.ActualizarVidaMaxima(saludMax);
         hud.ActualizarMuniciones(municiones);
@@ -70,7 +74,8 @@ public class Jugador : MonoBehaviour
 
         if(Input.GetButtonDown("Interact"))
         {
-            hud.CambiarMensajeEstado("El jugador actual es: " + TodosLosJugadores[0].name);
+            hud.CambiarMensajeEstado("El estado del jugador 1 de derribado es " + TodosLosJugadores[0].Derribado);
+
         }
 
         RevisarJugadoresCercanosYReanimar();
@@ -91,7 +96,7 @@ public class Jugador : MonoBehaviour
         {
             foreach (var j in TodosLosJugadores)
             {
-                if (j != this && j.derribado)
+                if (j != this && j.Derribado)
                 {
                     hud.CambiarMensajeEstado("Encuentro un jugador derribado");
                     float distancia = Vector3.Distance(transform.position, j.transform.position);
@@ -107,7 +112,7 @@ public class Jugador : MonoBehaviour
             }
         }
 
-
+     
         if (objetivoReanimacion != null)
         {
             float distancia = Vector3.Distance(transform.position, objetivoReanimacion.transform.position);
@@ -137,6 +142,7 @@ public class Jugador : MonoBehaviour
             }
 
         }
+    
     }
 
     void Disparar()
@@ -171,8 +177,8 @@ public class Jugador : MonoBehaviour
         {
             hud.CambiarMensajeEstado("Derribado");
             Debug.Log("Jugador " + name + " ha sido derribado");
-            derribado = true;
-            basic.CambiarDerribado(derribado);
+            CambiarDerribado(true);
+            basic.CambiarDerribado(Derribado);
         }
 
         Invoke("DesactivarInvulnerabilidad", 2);
@@ -180,8 +186,8 @@ public class Jugador : MonoBehaviour
 
     public void Revivir()
     {
-        derribado = false;
-        basic.CambiarDerribado(derribado);
+        CambiarDerribado(false);
+        basic.CambiarDerribado(Derribado);
         salud = saludMax;
         hud.ActualizarVida(salud);
         hud.CambiarMensajeEstado("Jugador reanimado");
@@ -218,5 +224,10 @@ public class Jugador : MonoBehaviour
     public void DesactivarInvulnerabilidad()
     {
         invulneravilidad = false;
+    }
+
+    public void CambiarDerribado(bool valor)
+    {
+        derribado.value = valor;
     }
 }

@@ -7,12 +7,15 @@ ScriptsOnlyBuild:
     - AimBehaviourBasic
     - BasicBehaviour
     - Boss
+    - Disparo
     - Enemigo_CQC
     - Enemigo_Distancia
     - Enemigo_Rango
+    - GameOver
     - Jugador
     - MoveBehaviour
     - PasarNivel
+    - Paulos.Projectiles.Projectile_Controller
     - Paulos.Projectiles.Projectile_Impact
     - Paulos.Projectiles.Projectile_Manager
     - ThirdPersonOrbitCamBasic
@@ -124,8 +127,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -605,6 +610,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 27910}
     - Class: 114
       Script: {instanceID: 27912}
+    - Class: 114
+      Script: {instanceID: 63010}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -878,6 +885,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 27910}
     - Class: 114
       Script: {instanceID: 27912}
+    - Class: 114
+      Script: {instanceID: 63010}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -962,6 +971,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16946}
     - Class: 114
+      Script: {instanceID: 17576}
+    - Class: 114
       Script: {instanceID: 17846}
     - Class: 114
       Script: {instanceID: 18556}
@@ -1023,6 +1034,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 27840}
     - Class: 114
       Script: {instanceID: 27910}
+    - Class: 114
+      Script: {instanceID: 63010}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -3230,7 +3243,7 @@ ScriptsOnlyBuild:
     className: Renderer2DData
   - hash:
       serializedVersion: 2
-      Hash: 60a936135f6b29208bb494fa7e7f7e31
+      Hash: a591387b0ec8344e23a7c6df95d16f77
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Jugador
@@ -3264,6 +3277,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: f36eea3550c434b91530a7c8aaba67de
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameOver
   platform: 19
   scenePathNames:
   - Assets/Scenes/Nivel 1.unity

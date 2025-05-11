@@ -20,6 +20,7 @@ public class Jugador : NetworkBehaviour
     public bool Derribado => derribado;
     public bool vivo;
     [SerializeField] hud hud;
+    [SerializeField] GameOver pantallaGameOver;
     [SerializeField] BasicBehaviour basic;
     public float tiempoInvulnerabilidad;
     public float tiempoParaReanimar;
@@ -28,6 +29,7 @@ public class Jugador : NetworkBehaviour
     private float tiempoReanimando;
     private Jugador objetivoReanimacion;
     private bool invulneravilidad = false;
+    private bool gameOver = true;
 
     void Awake()
     {
@@ -59,6 +61,20 @@ public class Jugador : NetworkBehaviour
 
     void Update()
     {
+        gameOver = true;
+
+        foreach (var j in TodosLosJugadores)
+        {
+            if (j.derribado == false)
+            {
+                gameOver = false;
+            }
+        }
+        if (gameOver)
+        {
+            pantallaGameOver.ActivarPantallaGameOver();
+        }
+
         if (Input.GetButtonDown("Fire1") && municiones > 0 && !derribado)
         {
             hud.CambiarMensajeEstado("Se disparo el arma");
@@ -79,6 +95,8 @@ public class Jugador : NetworkBehaviour
         }
 
         RevisarJugadoresCercanosYReanimar();
+
+        
     }
 
     void RevisarJugadoresCercanosYReanimar()

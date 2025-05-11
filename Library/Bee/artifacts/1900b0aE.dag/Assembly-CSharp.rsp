@@ -465,6 +465,7 @@
 "Assets/Scripts/Jugador/hud.cs"
 "Assets/Scripts/Jugador/Jugador.cs"
 "Assets/Scripts/Jugador/ModuloDerribado.cs"
+"Assets/Scripts/UI/GameOver.cs"
 "Assets/Scripts/UI/PasarNivel.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"

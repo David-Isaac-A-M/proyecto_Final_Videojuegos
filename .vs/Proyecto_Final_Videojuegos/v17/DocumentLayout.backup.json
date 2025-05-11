@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9AEDE2E7-1E51-7814-4472-F9A805AD87AB}|Assembly-CSharp.csproj|c:\\users\\famil\\proyecto_final_videojuegos\\assets\\scripts\\ui\\gameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AEDE2E7-1E51-7814-4472-F9A805AD87AB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\gameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9AEDE2E7-1E51-7814-4472-F9A805AD87AB}|Assembly-CSharp.csproj|c:\\users\\famil\\proyecto_final_videojuegos\\assets\\scripts\\jugador\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AEDE2E7-1E51-7814-4472-F9A805AD87AB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\jugador\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -74,11 +78,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "GameOver.cs",
+              "DocumentMoniker": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Scripts\\UI\\GameOver.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\GameOver.cs",
+              "ToolTip": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Scripts\\UI\\GameOver.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\GameOver.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T22:01:49.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ModuloDerribado.cs",
               "DocumentMoniker": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Scripts\\Jugador\\ModuloDerribado.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Jugador\\ModuloDerribado.cs",
@@ -90,20 +107,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Jugador.cs",
               "DocumentMoniker": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Scripts\\Jugador\\Jugador.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Jugador\\Jugador.cs",
               "ToolTip": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Scripts\\Jugador\\Jugador.cs",
               "RelativeToolTip": "Assets\\Scripts\\Jugador\\Jugador.cs",
-              "ViewState": "AgIAAKwAAAAAAAAAAAAYwL4AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAcwF4AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-20T23:25:43.597Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Boss.cs",
               "DocumentMoniker": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Scripts\\Enemigos\\Boss.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemigos\\Boss.cs",
@@ -115,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MinDrawer.cs",
               "DocumentMoniker": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Mech\\PostProcessing\\Editor\\PropertyDrawers\\MinDrawer.cs",
               "RelativeDocumentMoniker": "Assets\\Mech\\PostProcessing\\Editor\\PropertyDrawers\\MinDrawer.cs",
@@ -126,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MoveBehaviour.cs",
               "DocumentMoniker": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\3rdPerson\u002BFly\\Scripts\\PlayerScripts\\MoveBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\3rdPerson\u002BFly\\Scripts\\PlayerScripts\\MoveBehaviour.cs",
@@ -138,20 +155,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "BasicBehaviour.cs",
               "DocumentMoniker": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\3rdPerson\u002BFly\\Scripts\\PlayerScripts\\BasicBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\3rdPerson\u002BFly\\Scripts\\PlayerScripts\\BasicBehaviour.cs",
               "ToolTip": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\3rdPerson\u002BFly\\Scripts\\PlayerScripts\\BasicBehaviour.cs",
               "RelativeToolTip": "Assets\\3rdPerson\u002BFly\\Scripts\\PlayerScripts\\BasicBehaviour.cs",
-              "ViewState": "AgIAACsBAAAAAAAAAAAqwFABAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFABAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T16:33:33.697Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T16:33:33.697Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "SceneSwitcher.cs",
               "DocumentMoniker": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\PurrLobby\\Runtime\\Misc\\UI\\SceneSwitcher.cs",
               "RelativeDocumentMoniker": "Assets\\PurrLobby\\Runtime\\Misc\\UI\\SceneSwitcher.cs",
@@ -163,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "PasarNivel.cs",
               "DocumentMoniker": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Scripts\\UI\\PasarNivel.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\PasarNivel.cs",
@@ -175,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "LobbyManager.cs",
               "DocumentMoniker": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\PurrLobby\\Runtime\\Lobby\\LobbyManager.cs",
               "RelativeDocumentMoniker": "Assets\\PurrLobby\\Runtime\\Lobby\\LobbyManager.cs",
@@ -187,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Enemigo_Distancia.cs",
               "DocumentMoniker": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Scripts\\Enemigos\\Enemigo_Distancia.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemigos\\Enemigo_Distancia.cs",
@@ -199,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "hud.cs",
               "DocumentMoniker": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Scripts\\Jugador\\hud.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Jugador\\hud.cs",
@@ -211,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Disparo.cs",
               "DocumentMoniker": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Scripts\\Jugador\\Disparo.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Jugador\\Disparo.cs",
@@ -223,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Enemigo_Rango.cs",
               "DocumentMoniker": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Scripts\\Enemigos\\Enemigo_Rango.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemigos\\Enemigo_Rango.cs",
@@ -235,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Enemigo_CQC.cs",
               "DocumentMoniker": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Scripts\\Enemigos\\Enemigo_CQC.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemigos\\Enemigo_CQC.cs",
@@ -247,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Readme.txt",
               "DocumentMoniker": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\Sci-Fi Styled Modular Pack\\Readme.txt",
               "RelativeDocumentMoniker": "Assets\\Sci-Fi Styled Modular Pack\\Readme.txt",
@@ -259,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Readme.cs",
               "DocumentMoniker": "C:\\Users\\Famil\\Proyecto_Final_Videojuegos\\Assets\\TutorialInfo\\Scripts\\Readme.cs",
               "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\Readme.cs",

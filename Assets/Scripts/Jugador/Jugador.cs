@@ -2,6 +2,7 @@ using UnityEngine;
 using Paulos.Projectiles;
 using PurrNet;
 using System.Collections.Generic;
+using System;
 
 
 public class Jugador : NetworkBehaviour
@@ -68,7 +69,7 @@ public class Jugador : NetworkBehaviour
             if (j.derribado == false)
             {
                 gameOver = false;
-                break;
+                //break;
             }
         }
         if (gameOver)
@@ -148,20 +149,31 @@ public class Jugador : NetworkBehaviour
             {
                 tiempoReanimando += Time.deltaTime;
                 hud.CambiarMensajeEstado("Reanimando... " + tiempoReanimando.ToString() + "s");
-                Debug.Log("Reanimando... " + tiempoReanimando.ToString() + "s");
             }
 
             if (tiempoReanimando >= tiempoParaReanimar)
             {
-                objetivoReanimacion.Revivir(objetivoReanimacion);
+                SolicitarRevivir(objetivoReanimacion);
                 hud.CambiarMensajeEstado("Jugador reanimado");
-                Debug.Log("Jugador reanimado completamente");
                 objetivoReanimacion = null;
                 tiempoReanimando = 0;
             }
 
         }
     
+    }
+
+    public void SolicitarRevivir(Jugador J)
+    {
+        if (isServer)
+        {
+            RevivirServer(J);
+        }
+        else
+        {
+            // Eres un cliente, pide al servidor que lo haga
+            Revivir(J);
+        }
     }
 
     void Disparar()
@@ -204,6 +216,15 @@ public class Jugador : NetworkBehaviour
         Invoke("DesactivarInvulnerabilidad", 2);
     }
 
+    [ObserversRpc]
+    public void RevivirServer(Jugador J)
+    {
+        J.CambiarDerribado(false);
+        J.basic.CambiarDerribadoBasic(false);
+        J.salud = saludMax;
+        J.hud.ActualizarVida(salud);
+        J.hud.CambiarMensajeEstado("Jugador reanimado");
+    }
     [ServerRpc]
     public void Revivir(Jugador J)
     {
@@ -212,7 +233,6 @@ public class Jugador : NetworkBehaviour
         J.salud = saludMax;
         J.hud.ActualizarVida(salud);
         J.hud.CambiarMensajeEstado("Jugador reanimado");
-        Debug.Log("Jugador " + name + " reanimado completamente");
     }
 
     private void OnTriggerEnter(Collider collision)

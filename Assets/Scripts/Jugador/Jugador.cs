@@ -68,6 +68,7 @@ public class Jugador : NetworkBehaviour
             if (j.derribado == false)
             {
                 gameOver = false;
+                break;
             }
         }
         if (gameOver)
@@ -185,6 +186,7 @@ public class Jugador : NetworkBehaviour
 
     public void RecibirDaño()
     {
+        Debug.Log("Mando a llamar recibirDaño");
         if (invulneravilidad) return;
 
         invulneravilidad = true;
@@ -213,12 +215,17 @@ public class Jugador : NetworkBehaviour
         Debug.Log("Jugador " + name + " reanimado completamente");
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("enemigo") && !invulneravilidad)
         {
             RecibirDaño();
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        
 
         if (collision.gameObject.CompareTag("botiquin"))
         {

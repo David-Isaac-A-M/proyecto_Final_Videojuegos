@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class GameOver : MonoBehaviour
     {
         HUD.enabled = false;
         pantallaFin.enabled = true;
+    }
+
+    public void PalLobby()
+    {
+        SceneManager.LoadScene(0);
     }
 
 

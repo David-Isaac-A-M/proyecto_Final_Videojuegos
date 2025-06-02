@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\52612\\Documents\\DOC\u00B4S DIEGO\\pikanet\\proyecto_Final_Videojuegos\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1F16F6D7-8944-304E-6571-032CB32F9BF4}|Assembly-CSharp.csproj|C:\\Users\\52612\\Documents\\DOC\u00B4S DIEGO\\pikanet\\proyecto_Final_Videojuegos\\assets\\scripts\\jugador\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F16F6D7-8944-304E-6571-032CB32F9BF4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\jugador\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1F16F6D7-8944-304E-6571-032CB32F9BF4}|Assembly-CSharp.csproj|c:\\users\\52612\\documents\\doc\u00B4s diego\\pikanet\\proyecto_final_videojuegos\\assets\\scripts\\ui\\controleshud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F16F6D7-8944-304E-6571-032CB32F9BF4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\controleshud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F16F6D7-8944-304E-6571-032CB32F9BF4}|Assembly-CSharp.csproj|C:\\Users\\52612\\Documents\\DOC\u00B4S DIEGO\\pikanet\\proyecto_Final_Videojuegos\\assets\\scripts\\ui\\cargadorescena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F16F6D7-8944-304E-6571-032CB32F9BF4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\cargadorescena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F16F6D7-8944-304E-6571-032CB32F9BF4}|Assembly-CSharp.csproj|C:\\Users\\52612\\Documents\\DOC\u00B4S DIEGO\\pikanet\\proyecto_Final_Videojuegos\\assets\\scripts\\jugador\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F16F6D7-8944-304E-6571-032CB32F9BF4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\jugador\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F16F6D7-8944-304E-6571-032CB32F9BF4}|Assembly-CSharp.csproj|C:\\Users\\52612\\Documents\\DOC\u00B4S DIEGO\\pikanet\\proyecto_Final_Videojuegos\\assets\\scripts\\ui\\pasarnivel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,7 +23,7 @@
       "RelativeMoniker": "D:0:0:{1F16F6D7-8944-304E-6571-032CB32F9BF4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\escenario\\dm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F16F6D7-8944-304E-6571-032CB32F9BF4}|Assembly-CSharp.csproj|c:\\users\\52612\\documents\\doc\u00B4s diego\\pikanet\\proyecto_final_videojuegos\\assets\\scripts\\ui\\gameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1F16F6D7-8944-304E-6571-032CB32F9BF4}|Assembly-CSharp.csproj|C:\\Users\\52612\\Documents\\DOC\u00B4S DIEGO\\pikanet\\proyecto_Final_Videojuegos\\assets\\scripts\\ui\\gameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F16F6D7-8944-304E-6571-032CB32F9BF4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\gameover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,13 +70,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ControlesHUD.cs",
               "DocumentMoniker": "C:\\Users\\52612\\Documents\\DOC\u00B4S DIEGO\\pikanet\\proyecto_Final_Videojuegos\\Assets\\Scripts\\UI\\ControlesHUD.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\ControlesHUD.cs",
               "ToolTip": "C:\\Users\\52612\\Documents\\DOC\u00B4S DIEGO\\pikanet\\proyecto_Final_Videojuegos\\Assets\\Scripts\\UI\\ControlesHUD.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\ControlesHUD.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAwAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-02T05:28:21.832Z",
               "EditorCaption": ""
@@ -91,8 +91,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Escenario\\DM.cs",
               "ViewState": "AgIAAE8AAAAAAAAAAAAcwJMAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T14:54:02.738Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-29T14:54:02.738Z"
             },
             {
               "$type": "Document",
@@ -188,18 +187,17 @@
               "RelativeToolTip": "Assets\\Scripts\\UI\\GameOver.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T22:01:49.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T22:01:49.621Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Jugador.cs",
               "DocumentMoniker": "C:\\Users\\52612\\Documents\\DOC\u00B4S DIEGO\\pikanet\\proyecto_Final_Videojuegos\\Assets\\Scripts\\Jugador\\Jugador.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Jugador\\Jugador.cs",
               "ToolTip": "C:\\Users\\52612\\Documents\\DOC\u00B4S DIEGO\\pikanet\\proyecto_Final_Videojuegos\\Assets\\Scripts\\Jugador\\Jugador.cs",
               "RelativeToolTip": "Assets\\Scripts\\Jugador\\Jugador.cs",
-              "ViewState": "AgIAAOQBAAAAAAAAAAAswPABAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAI4BAAAAAAAAAAAAAKUBAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-20T23:25:43.597Z",
               "EditorCaption": ""
@@ -214,12 +212,11 @@
               "RelativeToolTip": "Assets\\Scripts\\UI\\PasarNivel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T18:15:09.543Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-02T18:15:09.543Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CargadorEscena.cs",
               "DocumentMoniker": "C:\\Users\\52612\\Documents\\DOC\u00B4S DIEGO\\pikanet\\proyecto_Final_Videojuegos\\Assets\\Scripts\\UI\\CargadorEscena.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\CargadorEscena.cs",
@@ -227,8 +224,7 @@
               "RelativeToolTip": "Assets\\Scripts\\UI\\CargadorEscena.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T01:32:14.213Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T01:32:14.213Z"
             }
           ]
         }

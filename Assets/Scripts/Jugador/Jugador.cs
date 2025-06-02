@@ -370,24 +370,27 @@ public class Jugador : MonoBehaviour
 
     public void RecibirDaño(int danio=1)
     {
-        Debug.Log("Mando a llamar recibirDaño");
-        if (invulneravilidad || powerUpsActivos.ContainsKey(TipoPowerUp.Shieldward)) return;
-
-        invulneravilidad = true;
-        salud -= danio;
-        hud.ActualizarVida(salud);
-        ReproducirDanio();
-
-        if (salud <= 0)
+        if (salud > 0)
         {
-            hud.CambiarMensajeEstado("Derribado");
-            Debug.Log("Jugador " + name + " ha sido derribado");
-            SecuestrarCursor();
-            CambiarDerribado(true);
-            basic.CambiarDerribadoBasic(true);
-        }
+            Debug.Log("Mando a llamar recibirDaño");
+            if (invulneravilidad || powerUpsActivos.ContainsKey(TipoPowerUp.Shieldward)) return;
 
-        Invoke("DesactivarInvulnerabilidad", 2);
+            invulneravilidad = true;
+            salud -= danio;
+            hud.ActualizarVida(salud);
+            ReproducirDanio();
+
+            if (salud <= 0)
+            {
+                hud.CambiarMensajeEstado("Derribado");
+                Debug.Log("Jugador " + name + " ha sido derribado");
+                SecuestrarCursor(true);
+                CambiarDerribado(true);
+                basic.CambiarDerribadoBasic(true);
+            }
+
+            Invoke("DesactivarInvulnerabilidad", 2);
+        }
     }
     public void RevivirServer(Jugador J)
     {

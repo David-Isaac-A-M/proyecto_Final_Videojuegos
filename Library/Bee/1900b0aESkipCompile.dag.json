@@ -29,8 +29,8 @@
       "DisplayName": "Writing 6097564273297756792.rsp",
       "ActionType": "WriteFile",
       "PayloadOffset": 83,
-      "PayloadLength": 7792,
-      "PayloadDebugContentSnippet": "-a=\"C:\\Users\\Famil\\Proyecto_Fi",
+      "PayloadLength": 9776,
+      "PayloadDebugContentSnippet": "-a=\"C:\\Users\\52612\\Documents\\D",
       "Inputs": [],
       "InputFlags": [],
       "Outputs": [
@@ -512,6 +512,6 @@
   "SharedResources": [],
   "Scanners": [],
   "Identifier": "Library/Bee/1900b0aESkipCompile.dag.json",
-  "PayloadsFile": "C:/Users/Famil/Proyecto_Final_Videojuegos/Library/Bee/1900b0aESkipCompile.dag.payloads",
+  "PayloadsFile": "C:/Users/52612/Documents/DOC´S DIEGO/pikanet/proyecto_Final_Videojuegos/Library/Bee/1900b0aESkipCompile.dag.payloads",
   "RelativePathToRoot": "../.."
 }

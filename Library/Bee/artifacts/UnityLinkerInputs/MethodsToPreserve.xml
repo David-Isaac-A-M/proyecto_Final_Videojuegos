@@ -2,29 +2,12 @@
 	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
 		<type fullname="Boss">
 			<method name="RecibirDaño"/>
-			<method name="RecibirDaño"/>
+		</type>
+		<type fullname="ControlesHUD">
+			<method name="Iniciar"/>
+			<method name="ReIniciar"/>
 		</type>
 		<type fullname="Enemigo_CQC">
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
-			<method name="RecibirDano"/>
 			<method name="RecibirDano"/>
 			<method name="RecibirDano"/>
 			<method name="RecibirDano"/>
@@ -36,22 +19,17 @@
 			<method name="RecibirDaño"/>
 			<method name="RecibirDaño"/>
 			<method name="RecibirDaño"/>
-			<method name="RecibirDaño"/>
-			<method name="RecibirDaño"/>
-			<method name="RecibirDaño"/>
-			<method name="RecibirDaño"/>
+		</type>
+		<type fullname="Enemigo_Taliban">
+			<method name="RecibirDano"/>
+			<method name="RecibirDano"/>
 		</type>
 		<type fullname="Jugador">
 			<method name="RecibirDaño"/>
 			<method name="RecibirDaño"/>
 			<method name="RecibirDaño"/>
-		</type>
-	</assembly>
-	<assembly fullname="PurrNetLobbySetup" ignoreIfMissing="1">
-		<type fullname="PurrLobby.SceneChangeButton">
-			<method name="ChangeScene"/>
-			<method name="ChangeScene"/>
-			<method name="ChangeScene"/>
+			<method name="RecibirDaño"/>
+			<method name="RecibirDaño"/>
 		</type>
 	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime" ignoreIfMissing="1">

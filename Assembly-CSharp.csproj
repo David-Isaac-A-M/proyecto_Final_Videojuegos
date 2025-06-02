@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{9AEDE2E7-1E51-7814-4472-F9A805AD87AB}</ProjectGuid>
+    <ProjectGuid>{1F16F6D7-8944-304E-6571-032CB32F9BF4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -55,7 +55,7 @@
     <UnityVersion>6000.0.35f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.35f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.35f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.35f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
@@ -70,6 +70,7 @@
     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\BasicBehaviour.cs" />
     <Compile Include="Assets\@PaulosCreations\ProjectileSystem\Demo\Scripts\FireProjectile.cs" />
     <Compile Include="Assets\3rdPerson+Fly\Scripts\LevelScripts\ControlsTutorial.cs" />
+    <Compile Include="Assets\TeKniKo_Free\Power_Ups\Scripts\ObjectBounce.cs" />
     <Compile Include="Assets\Scripts\UI\PasarNivel.cs" />
     <Compile Include="Assets\3rdPerson+Fly\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Enemigos\Enemigo_Rango.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\Scripts\Enemigos\Boss.cs" />
     <Compile Include="Assets\3rdPerson+Fly\Scripts\LevelScripts\ThirdPersonOrbitCamBasic.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\Scripts\Escenario\DM.cs" />
     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\MoveBehaviour.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\@PaulosCreations\ProjectileSystem\Scripts\Projectile_Impact.cs" />
@@ -86,6 +88,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\Scripts\UI\ControlesHUD.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
@@ -103,11 +106,13 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\@PaulosCreations\ProjectileSystem\Scripts\Projectile_Controller.cs" />
     <Compile Include="Assets\Scripts\Jugador\hud.cs" />
+    <Compile Include="Assets\Scripts\UI\CargadorEscena.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Mystery Studio\Easy Collider\Scripts\AddCollidersToMeshes.cs" />
     <Compile Include="Assets\Rango_Enemigo.cs" />
     <Compile Include="Assets\Scripts\Jugador\Disparo.cs" />
+    <Compile Include="Assets\NamuFX\_CommonAssets\Scripts\Viewer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\Scripts\Jugador\Jugador.cs" />
@@ -118,6 +123,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Scripts\Enemigos\Enemigo_CQC.cs" />
+    <Compile Include="Assets\Scripts\Enemigos\Enemigo_Taliban.cs" />
     <Compile Include="Assets\@PaulosCreations\ProjectileSystem\Scripts\Projectile_Manager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\@PaulosCreations\ProjectileSystem\Demo\Scripts\DemoDisplay.cs" />
@@ -153,6 +159,7 @@
     <None Include="Assets\@PaulosCreations\ProjectileSystem\ReadMe.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\PurrNet\Externals\7zip\System.Runtime.CompilerServices.Unsafe.dll" />
+    <None Include="Assets\SkySeries Freebie\Hdri setup.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
@@ -652,6 +659,14 @@
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
       <HintPath>Assets\PurrNet\Externals\7zip\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.35f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.35f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
@@ -1349,47 +1364,47 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UniTask.TextMeshPro.csproj">
-      <Project>{26C5CAB7-B227-293E-F302-837A7DF5338B}</Project>
+      <Project>{83E2972C-F743-306D-279E-C1E9E3A93CAB}</Project>
       <Name>UniTask.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="PurrNetLobby_Editor.csproj">
-      <Project>{3139DEBE-622D-D430-36C8-83D4CFC894EC}</Project>
+      <Project>{C90E9FB8-5C32-EC5B-794D-F08EFAA1F83A}</Project>
       <Name>PurrNetLobby_Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PurrNet.Runtime.csproj">
-      <Project>{0CC284D0-E801-48C8-0D15-A4DC4E53CB74}</Project>
+      <Project>{C29F46BC-035E-DE74-E5DD-6083164E5967}</Project>
       <Name>PurrNet.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.csproj">
-      <Project>{C3E8AE7A-2794-3C04-B3B5-DD42A5D4AF4E}</Project>
+      <Project>{69924432-6FD3-12FD-EC4D-20141BC9A789}</Project>
       <Name>UniTask</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.Addressables.csproj">
-      <Project>{CD570026-36B5-14E0-B6D8-B3F31DF94578}</Project>
+      <Project>{8B2B86AA-5285-79D8-D78C-FE904A28F4CC}</Project>
       <Name>UniTask.Addressables</Name>
     </ProjectReference>
     <ProjectReference Include="SimpleWebTransport.csproj">
-      <Project>{90616A7D-3A88-5ACA-864C-8F0598320561}</Project>
+      <Project>{5AED2206-1102-BF53-0F3F-B6833A1D231B}</Project>
       <Name>SimpleWebTransport</Name>
     </ProjectReference>
     <ProjectReference Include="LiteNetLib.csproj">
-      <Project>{8FC8360D-2C68-803F-8EAC-F9DE3FA16AA4}</Project>
+      <Project>{B297D2C5-35DE-599B-4024-191D72762D87}</Project>
       <Name>LiteNetLib</Name>
     </ProjectReference>
     <ProjectReference Include="PurrNet.Steam.Runtime.csproj">
-      <Project>{D27E05F0-B912-EA0A-77C3-3A554E5FE3B8}</Project>
+      <Project>{6F89628C-19D1-E30B-7D15-BD52C3852AA2}</Project>
       <Name>PurrNet.Steam.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.Linq.csproj">
-      <Project>{93D68C6D-26F2-C5E2-2C49-109350DE066E}</Project>
+      <Project>{421D6C21-A1D1-B33D-CA37-CCA5A08E5BCC}</Project>
       <Name>UniTask.Linq</Name>
     </ProjectReference>
     <ProjectReference Include="PurrNetLobbySetup.csproj">
-      <Project>{BA4441B2-17A8-8C56-53BD-218315F75F72}</Project>
+      <Project>{38DD7F05-5FF6-5DFB-5379-2383925ACF8A}</Project>
       <Name>PurrNetLobbySetup</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.DOTween.csproj">
-      <Project>{B4273C3F-FF50-1FDD-735E-40488CE54B65}</Project>
+      <Project>{A97868FC-4A28-3F4C-8890-4ADB966EDD98}</Project>
       <Name>UniTask.DOTween</Name>
     </ProjectReference>
   </ItemGroup>

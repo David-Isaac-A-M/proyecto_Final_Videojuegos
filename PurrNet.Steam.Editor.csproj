@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{84248ECB-9E98-BD0A-6FC7-404DF5C47542}</ProjectGuid>
+    <ProjectGuid>{0297D3D6-A391-3262-D2FA-B30908664110}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>PurrNet.Steam.Editor</AssemblyName>
@@ -55,7 +55,7 @@
     <UnityVersion>6000.0.35f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.35f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.35f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.35f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
@@ -547,6 +547,14 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.35f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEditor.UWP.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.35f1\Editor\Data\PlaybackEngines\MetroSupport\UnityEditor.UWP.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.35f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
@@ -601,6 +609,14 @@
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
       <HintPath>Assets\PurrNet\Externals\7zip\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.35f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.35f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="mscorlib">
@@ -1122,15 +1138,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PurrNet.Editor.csproj">
-      <Project>{27A949E2-A1E9-BDAF-07B0-FCA73427559E}</Project>
+      <Project>{F270521F-6ED9-1266-60A2-3627D48A95A6}</Project>
       <Name>PurrNet.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PurrNet.Steam.Runtime.csproj">
-      <Project>{D27E05F0-B912-EA0A-77C3-3A554E5FE3B8}</Project>
+      <Project>{6F89628C-19D1-E30B-7D15-BD52C3852AA2}</Project>
       <Name>PurrNet.Steam.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="PurrNet.Runtime.csproj">
-      <Project>{0CC284D0-E801-48C8-0D15-A4DC4E53CB74}</Project>
+      <Project>{C29F46BC-035E-DE74-E5DD-6083164E5967}</Project>
       <Name>PurrNet.Runtime</Name>
     </ProjectReference>
   </ItemGroup>

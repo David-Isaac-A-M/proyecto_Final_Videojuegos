@@ -1,45 +1,85 @@
 using Paulos.Projectiles;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using PurrNet;
 using UnityEngine.AI;
 using static UnityEngine.UI.Image;
 
 public class Enemigo_Distancia : MonoBehaviour
 {
     enum EstadoEnemigo { Patrullando, PersiguiendoJugador, Regresando }
+    public event Action<Vector3> OnDeath;
 
-    
+
     [SerializeField] int salud;
     [SerializeField] float maxDistance;
-    [SerializeField] float altura;
+    [SerializeField] float alturaMax;
+    [SerializeField] float alturaMin;
     [SerializeField] float velMovimiento;
     [SerializeField] float velRotación;
     [SerializeField] float distanciaCambio;
     [SerializeField] float rangoVision;
     [SerializeField] float anguloVision;
-    [SerializeField] Transform spawnBulletPoint;
-    [SerializeField] Transform puntoA;
-    [SerializeField] Transform puntoB;
-    
+    [SerializeField] Transform spawnBulletPoint;    
+    [SerializeField] float distanciaBusquedaPuntos = 5f;
+    [SerializeField] LayerMask terreno;
 
     private bool enfriamiento;
     private bool girando;
     private bool fijarAnimacion;
     private bool set;
     private bool vivo;
+    private Vector3 puntoA;
+    private Vector3 puntoB;
     private float tiempoSinVerJugador = 0f;
     private float tiempoMaximoSinVerJugador = 2f; // segundos
     private float tiempoMuerto;
     private Transform playerPosition;
-    private Transform objetivoActual;
+    private Vector3 objetivoActual;
     private Vector3 posicionAntesDePerseguir;
     private Vector3 posicionAnterior;
     private Animator animator;
     private EstadoEnemigo estadoActual;
-    
+    private bool efInstaKill = false;
+    private bool muelto = false;
 
+
+    private void OnEnable()
+    {
+        DM.OnPowerUpActivado += AplicarEfectoPowerUp;
+        DM.OnPowerUpDesactivado += LimpiarEfectoPowerUp;
+    }
+    private void OnDisable()
+    {
+        DM.OnPowerUpActivado -= AplicarEfectoPowerUp;
+        DM.OnPowerUpDesactivado -= LimpiarEfectoPowerUp;
+    }
+    public void AplicarEfectoPowerUp(TipoPowerUp efecto)
+    {
+        switch (efecto)
+        {
+            case TipoPowerUp.Instakill:
+                efInstaKill = true;
+                break;
+            case TipoPowerUp.Nuke:
+                salud = 0;
+                RecibirDaño();
+                break;
+            default:
+                break;
+        }
+    }
+    public void LimpiarEfectoPowerUp(TipoPowerUp efecto)
+    {
+        if (efecto == TipoPowerUp.Instakill)
+        {
+            efInstaKill = false;
+        }
+    }
     void Start()
     {
+        GenerarPuntosdeRuta();
         enfriamiento = false;
         fijarAnimacion = false;
         set = false; 
@@ -48,7 +88,6 @@ public class Enemigo_Distancia : MonoBehaviour
         vivo = true;
         estadoActual = EstadoEnemigo.Patrullando;
         animator = GetComponent<Animator>();
-        posicionAnterior = transform.position;
     }
 
     void Update()
@@ -57,13 +96,12 @@ public class Enemigo_Distancia : MonoBehaviour
         {
             Vector3 origenRayo = spawnBulletPoint.position;
             Vector3 direccion = spawnBulletPoint.forward;
-            //Este codigo sirve para ver el raycast que se genra para el disparo, descomente si va a cambiar la maxDistance u otro aspecto
+            //Este codigo sirve para ver el raycast que se genra para el disparo, descomentar si se va a cambiar la maxDistance u otro aspecto
             Debug.DrawRay(origenRayo, direccion * maxDistance, Color.red);
             //playerPosition = GameObject.FindWithTag("jugador").transform;
 
 
             DetectarJugador();
-
             switch (estadoActual)
             {
                 case EstadoEnemigo.Patrullando:
@@ -92,6 +130,38 @@ public class Enemigo_Distancia : MonoBehaviour
 
 
 
+    }
+
+    void GenerarPuntosdeRuta()
+    {
+        Dictionary<Vector3, float> posiblesPuntos = new Dictionary<Vector3, float>();
+
+        // Direcciones en las que lanzaremos los Raycasts
+        Vector3[] direcciones = { transform.right, -transform.right, transform.forward, -transform.forward };
+
+        foreach (Vector3 dir in direcciones)
+        {
+            if (Physics.Raycast(transform.position, dir, out RaycastHit hit, distanciaBusquedaPuntos, terreno))
+            {
+                posiblesPuntos.Add(hit.point - (dir * 1f), hit.distance);
+            }
+            else
+            {
+                posiblesPuntos.Add(transform.position + (dir * distanciaBusquedaPuntos), distanciaBusquedaPuntos);
+            }
+        }
+
+        // Seleccionar los dos puntos más alejados para patrullar
+        List<KeyValuePair<Vector3, float>> ordenados = new List<KeyValuePair<Vector3, float>>(posiblesPuntos);
+        ordenados.Sort((a, b) => b.Value.CompareTo(a.Value)); // Ordenar por distancia
+
+        if (ordenados.Count >= 2)
+        {
+            puntoA = ordenados[0].Key;
+            puntoB = ordenados[1].Key;
+        }
+
+        Debug.Log($" puntos de ruta: A={puntoA}, B={puntoB}");
     }
 
     void DetectarJugador()
@@ -148,7 +218,7 @@ public class Enemigo_Distancia : MonoBehaviour
 
     void Patrullar()
     {
-        Vector3 destino = new Vector3(objetivoActual.position.x, altura, objetivoActual.position.z);
+        Vector3 destino = new Vector3(objetivoActual.x, UnityEngine.Random.Range(alturaMin,alturaMax), objetivoActual.z);
 
         if (girando)
         {
@@ -168,7 +238,7 @@ public class Enemigo_Distancia : MonoBehaviour
 
     void VolverAPatrullar()
     {
-        Vector3 destino = new Vector3(posicionAntesDePerseguir.x, altura, posicionAntesDePerseguir.z);
+        Vector3 destino = new Vector3(posicionAntesDePerseguir.x, UnityEngine.Random.Range(alturaMin, alturaMax), posicionAntesDePerseguir.z);
 
         if (Vector3.Distance(transform.position, destino) > distanciaCambio)
         {
@@ -180,7 +250,7 @@ public class Enemigo_Distancia : MonoBehaviour
             // Volvió al punto de patrulla, retomar rutina
             estadoActual = EstadoEnemigo.Patrullando;
             girando = true;
-            objetivoActual = (Vector3.Distance(destino, puntoA.position) < Vector3.Distance(destino, puntoB.position)) ? puntoB : puntoA;
+            objetivoActual = (Vector3.Distance(destino, puntoA) < Vector3.Distance(destino, puntoB)) ? puntoB : puntoA;
         }
     }
 
@@ -193,7 +263,7 @@ public class Enemigo_Distancia : MonoBehaviour
         direccion.Normalize();
 
         Vector3 destino = playerPosition.position - direccion * (maxDistance / 2);
-        destino.y = altura;
+        destino.y = alturaMax;
 
         GirarHacia(playerPosition.position);
         MoverHacia(destino);
@@ -325,16 +395,17 @@ public class Enemigo_Distancia : MonoBehaviour
 
     public void RecibirDaño()
     {
-        
+        salud = (!efInstaKill) ? salud - 1 : 0;
         salud -= 1;
         Debug.Log("Salud enemigo actual: " + salud);
-        if (salud <= 0)
+        if (salud <= 0 && !muelto)
         {
             Debug.Log("Me mori");
             vivo = false;
             tiempoMuerto = 0f;
             animator.SetBool("death", true);
-            
+            OnDeath?.Invoke(transform.position);
+            muelto = true;
         }
     }
 

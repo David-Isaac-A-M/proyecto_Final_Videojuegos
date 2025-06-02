@@ -1,13 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using PurrNet;
-using PurrLobby;
-public class PasarNivel : NetworkBehaviour
+public class PasarNivel : MonoBehaviour
 {
     Jugador jugador;
 
-    [PurrScene, SerializeField] private string nextScene;
-    [SerializeField] private LobbyManager lobbyManager;
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("jugador"))
@@ -17,7 +13,6 @@ public class PasarNivel : NetworkBehaviour
         }
     }
 
-    [ObserversRpc]
     private void CambiarEscena()
     {
 
@@ -26,7 +21,8 @@ public class PasarNivel : NetworkBehaviour
         PlayerPrefs.SetInt("salud", jugador.salud);
         Debug.Log("La municion del jugador es: " + jugador.municiones);
         //lobbyManager.SetLobbyStarted();
-        SceneManager.LoadSceneAsync(nextScene);
+        int escenaActual = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadSceneAsync(escenaActual+1);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

@@ -1,15 +1,13 @@
 using UnityEngine;
-using PurrNet;
 
-public class ModuloDerribado : NetworkBehaviour
+public class ModuloDerribado : MonoBehaviour
 {
-    [SerializeField] private SyncVar<bool> derribado;
+    [SerializeField] private bool derribado;
 
     public bool Derribado => derribado;
 
-   [ObserversRpc(bufferLast: true)]
     public void CambiarDerrobado (bool valor)
     {
-        derribado.value = valor;
+        derribado = valor;
     }
 }
